@@ -1,16 +1,43 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2018-10-25 06:54:55
+  from 'D:\wamp64\www\speedbuy\app\view\adminlogin.html' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5bd168bf8a48a0_71669683',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '6caa781734551eff192d78194e58bb2fb2353b80' => 
+    array (
+      0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\adminlogin.html',
+      1 => 1540450489,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5bd168bf8a48a0_71669683 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <title>speedbuy后台登陆</title>
-    <link rel="stylesheet" href="{CSS_PATH}layui.css">
-    <link rel="stylesheet" href="{CSS_PATH}adminlogin.css">
+    <link rel="stylesheet" href="<?php echo CSS_PATH;?>
+layui.css">
+    <link rel="stylesheet" href="<?php echo CSS_PATH;?>
+adminlogin.css">
 </head>
 <body>
 <!--大括号里是后台输出的数据，通过调用name名字获取value值，括号内不可使用空格，否则无法识别-->
-<!--<h1> {$name} </h1>-->
+<!--<h1> <?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+ </h1>-->
 <div class="box">
-    <img src="{IMG_PATH}LOGO.png" alt="速买聚实惠">
+    <img src="<?php echo IMG_PATH;?>
+LOGO.png" alt="速买聚实惠">
     <h2>后台登陆(CMS)</h2>
     <form class="layui-form" action="">
         <div class="layui-form-item">
@@ -49,5 +76,12 @@
 </div>
 </body>
 </html>
-<script src="{LAYUIJS_PATH}layui.all.js"></script>
-<script src="{JS_PATH}adminlogin.js"></script>
+<?php echo '<script'; ?>
+ src="<?php echo LAYUIJS_PATH;?>
+layui.all.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+adminlogin.js"><?php echo '</script'; ?>
+><?php }
+}
