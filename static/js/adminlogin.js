@@ -19,16 +19,13 @@ form.on('submit(formDemo)',function (data) {
             if (res == "success") {
                 layer.open({
                     type: 1,
-                    title: ['提示', 'font-size:18px;'], //显示标题栏默认false
+                    title: ['提示', 'font-size:18px;background:#099668;color:#fff;'], //显示标题栏默认false
                     area: '300px;',
                     closeBtn: 2,
-                    shade: 0.8,
-                    shadeClose: true,
-                    time: 50000,
+                    time: 5000,
                     id: 'LAY_layuipro', //设定一个id，防止重复弹出
                     anim: 1,
-                    moveType: 1 ,//拖拽模式，0或者1
-                    content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;font-size: 30px;">欢迎登陆！</div>',
+                    content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;font-size: 20px;">欢迎登陆！</div>',
                 });
                 location.href = "/speedbuy/index.php/managecate";
                 // layer.msg('登陆成功', {icon: 6});
@@ -36,16 +33,13 @@ form.on('submit(formDemo)',function (data) {
             else if (res == "fail") {
                 layer.open({
                     type: 1,
-                    title: ['提示', 'font-size:18px;'], //显示标题栏默认false
+                    title: ['提示', 'font-size:18px;background:red;color:#fff;'], //显示标题栏默认false
                     area: '300px;',
                     closeBtn: 2,
-                    shade: 0.8,
-                    shadeClose: true,
-                    time: 50000,
+                    time: 5000,
                     id: 'LAY_layuipro', //设定一个id，防止重复弹出
                     anim: 1,
-                    moveType: 1 ,//拖拽模式，0或者1
-                    content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;font-size: 30px;">登陆失败！</div>',
+                    content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;font-size: 20px;">登陆失败！</div>',
                 });
             }
         }

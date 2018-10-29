@@ -7,9 +7,9 @@ class main{
     {
         // 实例化一个smarty
         $this -> smarty = new Smarty();
-        // 初始化
+        // 初始化，模板目录
         $this -> smarty -> setTemplateDir('app/view');
-        // 初始化
+        // 初始化，编译文件目录
         $this -> smarty -> setCompileDir('compile');
     }
 }

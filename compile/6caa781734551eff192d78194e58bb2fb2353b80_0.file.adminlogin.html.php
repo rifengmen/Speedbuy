@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-25 06:54:55
+/* Smarty version 3.1.33, created on 2018-10-28 02:27:13
   from 'D:\wamp64\www\speedbuy\app\view\adminlogin.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd168bf8a48a0_71669683',
+  'unifunc' => 'content_5bd51e816d8b10_22647414',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '6caa781734551eff192d78194e58bb2fb2353b80' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\adminlogin.html',
-      1 => 1540450489,
+      1 => 1540476858,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bd168bf8a48a0_71669683 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd51e816d8b10_22647414 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -37,7 +37,7 @@ adminlogin.css">
  </h1>-->
 <div class="box">
     <img src="<?php echo IMG_PATH;?>
-LOGO.png" alt="速买聚实惠">
+logo.png" alt="速买聚实惠">
     <h2>后台登陆(CMS)</h2>
     <form class="layui-form" action="">
         <div class="layui-form-item">
