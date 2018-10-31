@@ -5,14 +5,22 @@ table.render({
         {type: 'checkbox', fixed: 'left'},
         {field: 'sid', width: 50, title: 'SID',},
          {field: 'shopname', width: 100, title: '店铺名称'},
-        {field: 'thumb', width: 100, title: '缩略图', templet:'<div><img src="{{ d.sthumb}}" width="50"></div>'},
+        {field: 'thumb', width: 100, title: '缩略图', templet:'<div><img src="{{ d.sthumb}}" width="50" height="50"></div>'},
         {field: 'sale', width: 80, title: '销量'},
         {field: 'score', width: 80, title: '评分'},
         {field: 'notice', width: 220, title: '公告'},
         {field: 'fee', width: 80, title: '配送费'},
-        {field: 'views', width: 80, title: '实景图片', templet:'<div><img src="{{ d.views}}" width="50"></div>'},
+        {field: 'views', width: 400, title: '实景图片', templet:function (d) {
+                let arr = d.views.split(",");
+                let str = "<div>";
+                arr.forEach(val => {
+                    str += `<img src="${val}" alt="${val}" width="50" height="50" style="margin: 0 10px">`
+                })
+                str += "</div>";
+                return str;
+            }},
         {field: 'slogan', width: 220, title: '口号'},
-        {field: 'stype', width: 80, title: '类型'},
+        {field: 'stype', width: 80, title: '经营范围'},
         {field: 'sphone', width: 150, title: '店铺电话'},
         {field: 'cid', width: 100, title: '所属分类'},
         {fixed: 'right', width:200, align:'center', toolbar: '#toolbar', title: '操作'}

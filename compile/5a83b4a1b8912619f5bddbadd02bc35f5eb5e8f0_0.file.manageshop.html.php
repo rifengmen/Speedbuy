@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-30 10:25:42
+/* Smarty version 3.1.33, created on 2018-10-31 09:18:32
   from 'D:\wamp64\www\speedbuy\app\view\manageshop.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd831a69f64a7_98471626',
+  'unifunc' => 'content_5bd97368aceb75_23009533',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a83b4a1b8912619f5bddbadd02bc35f5eb5e8f0' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\manageshop.html',
-      1 => 1540895139,
+      1 => 1540976914,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bd831a69f64a7_98471626 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd97368aceb75_23009533 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);

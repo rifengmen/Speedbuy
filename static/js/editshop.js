@@ -3,6 +3,7 @@ let sthumb = $("input:hidden[name=sthumb]");
 let views = $("input:hidden[name=views]");
 let imgbox = $(".imgBox");
 let imgbox2 = $(".imgBox2");
+let arr = views.val().split(",");
 upload.render({
     elem: '#test1',
     acceptMime: 'image/jpg, image/png, image/jpeg, image/webp, image/gif',
@@ -37,34 +38,35 @@ imgbox.on("click",".layui-icon-search",function () {
     $(this).closest("li").css({"width":"300px","height":"300px"});
     return false;
 });
+// 实景图上传图片（上传多张）
 upload.render({
     elem: '#test2',
     acceptMime: 'image/jpg, image/png, image/jpeg, image/webp, image/gif',
     exts: "jpg|jpeg|png|bmp|gif|webp",
     url: '/speedbuy/index.php/upload/init',
+    multiple: true,
     done: function(res){ //上传后的回调
-        let lis = $(".imgBox2>li");
-        if (lis.length) {
-            $("img",lis).attr('src',res.msg);
-            views.val(res.msg);
-        }
-        else {
-            let str = ` <li>
-                                 <img src="${res.msg}" width="100">
-                                 <div class="mask"></div>
-                                 <div class="button">
-                                     <i class="layui-icon layui-icon-search"></i>
-                                     <i class="layui-icon layui-icon-delete"></i>
-                                 </div>
-                             </li>`;
-            imgbox2.append(str);
-            views.val(res.msg);
-        }
+        let str = `<li>
+                             <img src="${res.msg}" width="100">
+                             <div class="mask"></div>
+                             <div class="button">
+                                 <i class="layui-icon layui-icon-search"></i>
+                                 <i class="layui-icon layui-icon-delete"></i>
+                             </div>
+                       </li>`;
+        imgbox2.append(str);
+        arr.push(res.msg);
+        let nstr = arr.join(",");
+        views.val(nstr);
     }
 });
+// 删除图片
 imgbox2.on("click",".layui-icon-delete",function () {
+    let index = $(this).closest("li").index();
     $(this).closest("li").remove();
-    views.val('');
+    arr.splice(index,1);
+    let nstr = arr.join(",");
+    views.val(nstr);
     return false;
 });
 imgbox2.on("click",".layui-icon-search",function () {

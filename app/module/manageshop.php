@@ -8,22 +8,20 @@ class manageshop extends main{
     }
     // 展示查看店铺页面
     function init() {
-
         $this -> smarty -> assign("info",$this->info);
         $this -> smarty -> display("manageshop.html");
     }
     // 展示添加店铺页面
     function insert() {
-        $db = new DB('shop');
-        $obj = new Menu();
-        $str = $obj -> getCate($db -> mysql,'category','0','0');
+        $db = new DB('category');
+        $str = $db -> where("pid!=0") -> select("*");
         $this -> smarty -> assign('str',$str);
         $this -> smarty -> assign('info',$this -> info);
         $this -> smarty -> display('insertshop.html');
     }
     // 执行添加店铺指令
     function insert1() {
-        $data = $_GET;
+        $data = $_POST;
         $db = new DB('shop');
         $rows = $db -> insert($data);
         if ($rows == 1) {
@@ -81,11 +79,14 @@ class manageshop extends main{
         $sid = $_GET['sid'];
         $cid = $_GET['cid'];
         $db = new DB('shop');
-        $obj = new Menu();
-        $str = $obj -> getCate($db -> mysql,'category','0','0',$cid);
         $res = $db -> where("sid=$sid") -> select('*')[0];
+        $vstr = $res['views'];
+        $arr = explode(',',$vstr);
+        $db = new DB('category');
+        $str = $db -> where("pid!=0") -> select("*");
         $this -> smarty -> assign('str',$str);
         $this -> smarty -> assign('res',$res);
+        $this -> smarty -> assign('arr',$arr);
         $this -> smarty -> assign('info',$this -> info);
         $this -> smarty -> display("editshop.html");
     }

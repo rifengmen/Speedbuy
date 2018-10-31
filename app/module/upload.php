@@ -10,8 +10,8 @@ class upload{
     {
         // 初始化属性
         $this -> url = "";
-        // 设置上传文件最大为50kb
-        $this -> size = 50;
+        // 设置上传文件最大为500kb
+        $this -> size = 500;
         // 设置上传文件格式为['image/png','image/jpg','image/jpeg','image/gif'],设为关联数组以便遍历
         $this -> type = ['image/png','image/jpg','image/jpeg','image/gif','image/webp'];
         // 设置报错信息
@@ -23,7 +23,7 @@ class upload{
             4 => '没有文件被上传',
             6 => '找不到临时文件夹',
             7 => '文件写入失败',
-            8 => '上传文件超过50kb',
+            8 => '上传文件超过500kb',
             9 => '上传文件格式错误'
         ];
     }
@@ -81,7 +81,7 @@ class upload{
             // 获取最后一组数据，即文件扩展名
             $ext = $arr[count($arr)-1];
             // 设置文件名字
-            $filename = time() . rand(0,100) . '.' . $ext;
+            $filename = time() . rand(0,10000) . '.' . $ext;
             // 设定移动路径
             $path = "./uploadimg/".$date."/".$filename;
             // 移动文件到指定目录

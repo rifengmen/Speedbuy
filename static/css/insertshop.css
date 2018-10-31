@@ -4,6 +4,7 @@
     height: auto;
     position: relative;
     padding: 15px;
+    display: flex;
 }
 .imgBox>li,
 .imgBox2>li {
@@ -12,6 +13,7 @@
     height: 148px;
     position: relative;
     overflow: hidden;
+    margin: 0 10px;
 }
 .imgBox>li>img,
 .imgBox2>li>img {

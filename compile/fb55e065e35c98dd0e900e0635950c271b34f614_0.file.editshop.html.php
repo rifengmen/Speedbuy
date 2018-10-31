@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-30 15:25:09
+/* Smarty version 3.1.33, created on 2018-10-31 07:43:52
   from 'D:\wamp64\www\speedbuy\app\view\editshop.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd877d54bb4a8_61522559',
+  'unifunc' => 'content_5bd95d385584d4_80269091',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb55e065e35c98dd0e900e0635950c271b34f614' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\editshop.html',
-      1 => 1540913069,
+      1 => 1540971215,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bd877d54bb4a8_61522559 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bd95d385584d4_80269091 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -36,9 +36,18 @@ insertshop.css">
             <label class="layui-form-label">所属分类</label>
             <div class="layui-input-block">
                 <select name="cid" lay-verify="required">
-                    <option value="0">一级标题</option>
-                    <?php echo $_smarty_tpl->tpl_vars['str']->value;?>
-
+                    <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['str']->value, 'v', false, 'key');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['v']->value) {
+?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['cid'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</option>
+                    <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </select>
             </div>
         </div>
@@ -49,28 +58,6 @@ insertshop.css">
                 <input type="text" name="shopname" required  lay-verify="required" placeholder="请输入店铺名称" autocomplete="off" class="layui-input" value="<?php echo $_smarty_tpl->tpl_vars['res']->value['shopname'];?>
 ">
             </div>
-        </div>
-        <!--缩略图-->
-        <div class="layui-form-item">
-            <label class="layui-form-label">缩略图上传</label>
-            <button type="button" class="layui-btn" id="test1">
-                <i class="layui-icon">&#xe67c;</i>上传图片
-            </button>
-        </div>
-        <!--预览缩略图-->
-        <div class="layui-form-item">
-            <label class="layui-form-label"></label>
-            <ul class="imgBox">
-                <li>
-                    <img src="<?php echo $_smarty_tpl->tpl_vars['res']->value['sthumb'];?>
-" width="100">
-                    <div class="mask"></div>
-                    <div class="button">
-                        <i class="layui-icon layui-icon-search"></i>
-                        <i class="layui-icon layui-icon-delete"></i>
-                    </div>
-                </li>
-            </ul>
         </div>
         <!--公告-->
         <div class="layui-form-item">
@@ -88,28 +75,6 @@ insertshop.css">
 ">
             </div>
         </div>
-        <!--实景图片-->
-        <div class="layui-form-item">
-            <label class="layui-form-label">实景图片</label>
-            <button type="button" class="layui-btn" id="test2">
-                <i class="layui-icon">&#xe67c;</i>上传图片
-            </button>
-        </div>
-        <!--预览实景图片-->
-        <div class="layui-form-item">
-            <label class="layui-form-label"></label>
-            <ul class="imgBox2">
-                <li>
-                    <img src="<?php echo $_smarty_tpl->tpl_vars['res']->value['views'];?>
-" width="100">
-                    <div class="mask"></div>
-                    <div class="button">
-                        <i class="layui-icon layui-icon-search"></i>
-                        <i class="layui-icon layui-icon-delete"></i>
-                    </div>
-                </li>
-            </ul>
-        </div>
         <!--口号-->
         <div class="layui-form-item">
             <label class="layui-form-label">店铺口号</label>
@@ -118,11 +83,11 @@ insertshop.css">
 ">
             </div>
         </div>
-        <!--类型-->
+        <!--经营范围-->
         <div class="layui-form-item">
-            <label class="layui-form-label">店铺</label>
+            <label class="layui-form-label">经营范围</label>
             <div class="layui-input-block">
-                <input type="text" name="stype" required  lay-verify="required" placeholder="请输入店铺名称" autocomplete="off" class="layui-input" value="<?php echo $_smarty_tpl->tpl_vars['res']->value['stype'];?>
+                <input type="text" name="stype" required  lay-verify="required" placeholder="请输入店铺经营范围" autocomplete="off" class="layui-input" value="<?php echo $_smarty_tpl->tpl_vars['res']->value['stype'];?>
 ">
             </div>
         </div>
@@ -134,12 +99,65 @@ insertshop.css">
 ">
             </div>
         </div>
+        <!--缩略图-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">缩略图上传</label>
+            <button type="button" class="layui-btn" id="test1">
+                <i class="layui-icon">&#xe67c;</i>上传图片
+            </button>
+        </div>
         <!--隐藏的input，用来携带上传缩略图的路径-->
         <input type="hidden" name="sthumb" value="<?php echo $_smarty_tpl->tpl_vars['res']->value['sthumb'];?>
 ">
+        <!--预览缩略图-->
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <ul class="imgBox">
+                <li>
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['res']->value['sthumb'];?>
+" width="100">
+                    <div class="mask"></div>
+                    <div class="button">
+                        <i class="layui-icon layui-icon-search"></i>
+                        <i class="layui-icon layui-icon-delete"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--实景图片-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">实景图片</label>
+            <button type="button" class="layui-btn" id="test2">
+                <i class="layui-icon">&#xe67c;</i>上传图片
+            </button>
+        </div>
         <!--隐藏的input，用来携带上传实景图的路径-->
         <input type="hidden" name="views" value="<?php echo $_smarty_tpl->tpl_vars['res']->value['views'];?>
 ">
+        <!--预览实景图片-->
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <ul class="imgBox2">
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['arr']->value, 'v');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+?>
+                <li>
+                    <img src="<?php echo $_smarty_tpl->tpl_vars['v']->value;?>
+" width="100">
+                    <div class="mask"></div>
+                    <div class="button">
+                        <i class="layui-icon layui-icon-search"></i>
+                        <i class="layui-icon layui-icon-delete"></i>
+                    </div>
+                </li>
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+            </ul>
+        </div>
         <!--隐藏的input，用来携带上传实景图的sid-->
         <input type="hidden" name="sid" value="<?php echo $_smarty_tpl->tpl_vars['res']->value['sid'];?>
 ">
