@@ -18,17 +18,17 @@
 </style>
 <div class="layui-body" style="padding: 50px">
     <div class="demoTable">
-        搜索CID：
+        搜索SID：
+        <div class="layui-inline">
+            <input class="layui-input" name="sid" id="sid" autocomplete="off">
+        </div>
+        搜索店铺名称：
+        <div class="layui-inline">
+            <input class="layui-input" name="shopname" id="shopname" autocomplete="off">
+        </div>
+        搜索所属分类：
         <div class="layui-inline">
             <input class="layui-input" name="cid" id="cid" autocomplete="off">
-        </div>
-        搜索栏目名称：
-        <div class="layui-inline">
-            <input class="layui-input" name="title" id="title" autocomplete="off">
-        </div>
-        搜索PID：
-        <div class="layui-inline">
-            <input class="layui-input" name="pid" id="pid" autocomplete="off">
         </div>
         <button class="layui-btn" data-type="reload">搜索</button>
     </div>
@@ -51,6 +51,6 @@
 </div>
 </div>
 <script src="{LAYUIJS_PATH}layui.all.js"></script>
-<script src="{JS_PATH}managecate.js"></script>
+<script src="{JS_PATH}manageshop.js"></script>
 </body>
 </html>

@@ -1,22 +1,26 @@
-.imgBox {
+.imgBox,
+.imgBox2 {
     width: 100%;
     height: auto;
     position: relative;
     padding: 15px;
 }
-.imgBox>li {
+.imgBox>li,
+.imgBox2>li {
     box-sizing: border-box;
     width: 148px;
     height: 148px;
     position: relative;
     overflow: hidden;
 }
-.imgBox>li>img {
+.imgBox>li>img,
+.imgBox2>li>img {
     width: 100%;
     height: 100%;
     display: block;
 }
-.imgBox>li>.mask {
+.imgBox>li>.mask,
+.imgBox2>li>.mask {
     width: 148px;
     height: 148px;
     position: absolute;
@@ -26,7 +30,8 @@
     transition: all ease-in .5s;
     opacity: 0;
 }
-.imgBox>li>.button {
+.imgBox>li>.button,
+.imgBox2>li>.button {
     width: 70px;
     height: 30px;
     position: absolute;
@@ -36,16 +41,19 @@
     display: flex;
     justify-content: space-between;
 }
-.imgBox>li>.button>i {
+.imgBox>li>.button>i,
+.imgBox2>li>.button>i {
     width: 30px;
     height: 30px;
     transition: all ease .5s;
     transform: scale(0,0) rotate(0deg);
 }
-.imgBox>li:hover .mask {
+.imgBox>li:hover .mask,
+.imgBox2>li:hover .mask {
     opacity: 1;
 }
-.imgBox>li:hover>.button>i {
+.imgBox>li:hover>.button>i,
+.imgBox2>li:hover>.button>i {
     color: #fff;
     font-size: 30px;
     transform: scale(1,1) rotate(360deg);

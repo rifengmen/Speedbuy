@@ -18,7 +18,7 @@ class Menu {
         // 当id值存在时
         if ($currentid) {
             // 查询数据库返回关联数组
-            $arr = $mysql -> query("select * from category where id=$currentid") -> fetch_assoc();
+            $arr = $mysql -> query("select * from $tablename where cid=$currentid") -> fetch_assoc();
             // 将查询到的pid值赋给$pid
             $pid = $arr['pid'];
         }
@@ -45,4 +45,5 @@ class Menu {
         // 返回字符串
         return $this -> str;
     }
+
 }

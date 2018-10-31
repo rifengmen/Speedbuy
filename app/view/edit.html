@@ -1,0 +1,59 @@
+{include file='header.html'};
+{include file='slide.html'};
+<link rel="stylesheet" href="{CSS_PATH}insertcate.css">
+<div class="layui-body" style="padding: 50px">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">父级栏目</label>
+            <div class="layui-input-block">
+                <select name="pid" lay-verify="required">
+                    <option value="0">一级标题</option>
+                    {$str}
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">栏目名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input" value="{$res.title}">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">图片上传</label>
+            <button type="button" class="layui-btn" id="test1">
+                <i class="layui-icon">&#xe67c;</i>上传图片
+            </button>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <ul class="imgBox">
+                <li>
+                    <img src="{$res.thumb}" id="test2" width="100">
+                    <div class="mask"></div>
+                    <div class="button">
+                        <i class="layui-icon layui-icon-search"></i>
+                        <i class="layui-icon layui-icon-delete"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--隐藏的input，用来携带上传图片的路径-->
+        <input type="hidden" name="thumb" value="{$res.thumb}">
+        <input type="hidden" name="cid" value="{$res.cid}">
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submit">确认修改</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="layui-footer">
+    <!-- 底部固定区域 -->
+    版权属于我
+</div>
+</div>
+<script src="{LAYUIJS_PATH}layui.all.js"></script>
+<script src="{JS_PATH}editcate.js"></script>
+</body>
+</html>
