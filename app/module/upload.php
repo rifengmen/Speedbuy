@@ -27,6 +27,7 @@ class upload{
             9 => '上传文件格式错误'
         ];
     }
+    
     // 1.是否为上传文件
     //  is_uploaded_file()
     // 2.创建目录 uploadimg/日期/文件
@@ -40,12 +41,14 @@ class upload{
     //  设置文件名字  时间戳.后缀名  以防止重名
     // 3.移动文件 tmp_name  到指定目录
     //  move_uploaded_file()
+
     //  返回文件当前路径
     function init() {
         $file = $_FILES['file'];
         $res = $this -> upload($file);
         echo json_encode($res);
     }
+    // 设定上传图片路径
     function upload($file)
     {
         $code = $file['error'];
@@ -90,9 +93,11 @@ class upload{
             return ['code' => 10,'msg' => "/speedbuy/uploadimg/".$date."/".$filename];
         }
     }
+    // 验证上传图片大小
     function isSize($size){
         return $size / 1024 > $this -> size ? true : false;
     }
+    // 验证上传图片类型
     function isType($type){
         for($i = 0; $i < count($this->type); $i++){
             if ($this -> type[$i] == $type){
