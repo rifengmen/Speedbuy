@@ -1,7 +1,5 @@
 <?php
 // M  V  C
-// localhost/speedbuy/index.php/adminlogin/login  登录
-// localhost/speedbuy/index.php/adminlogin/register  注册
 define('CSS_PATH','/speedbuy/static/css/');
 define('JS_PATH','/speedbuy/static/js/');
 define('LAYUIJS_PATH','/speedbuy/static/');

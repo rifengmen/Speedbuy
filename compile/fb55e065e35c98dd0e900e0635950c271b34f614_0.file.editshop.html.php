@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-31 07:43:52
+/* Smarty version 3.1.33, created on 2018-11-01 02:08:39
   from 'D:\wamp64\www\speedbuy\app\view\editshop.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd95d385584d4_80269091',
+  'unifunc' => 'content_5bda602757b0b2_51579201',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb55e065e35c98dd0e900e0635950c271b34f614' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\editshop.html',
-      1 => 1540971215,
+      1 => 1541038115,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bd95d385584d4_80269091 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bda602757b0b2_51579201 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -128,7 +128,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <div class="layui-form-item">
             <label class="layui-form-label">实景图片</label>
             <button type="button" class="layui-btn" id="test2">
-                <i class="layui-icon">&#xe67c;</i>上传图片
+                <i class="layui-icon">&#xe67c;</i>多图上传
             </button>
         </div>
         <!--隐藏的input，用来携带上传实景图的路径-->

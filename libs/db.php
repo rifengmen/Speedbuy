@@ -2,12 +2,16 @@
 class DB{
     public $mysql;
     public $tablename;
-    public $wheresql;
+    private $wheresql;
+    private $ordersql;
+    private $limitsql;
     function __construct($tablename)
     {
         $this -> config();
         $this -> tablename = $tablename;
         $this -> wheresql = "";
+        $this -> ordersql = "";
+        $this -> limitsql = "";
     }
     function config() {
         $this -> mysql = new mysqli('localhost','root','','speedbuy','3306');
@@ -70,7 +74,7 @@ class DB{
         }
         else {
             $sql = "select $str from $this->tablename ";
-            $sql .= $this -> wheresql;
+            $sql .= $this -> wheresql . $this -> ordersql . $this -> limitsql;
         }
         $res = $this -> mysql -> query($sql) -> fetch_all(MYSQLI_ASSOC);
         return $res;
@@ -86,6 +90,14 @@ class DB{
             }
             $this -> wheresql = substr($this->wheresql,'0','-3');
         }
+        return $this;
+    }
+    function order($key,$type) {
+        $this -> ordersql = " order by $key $type ";
+        return $this;
+    }
+    function limit($offset,$limit) {
+        $this -> ordersql = " limit $offset,$limit ";
         return $this;
     }
 }

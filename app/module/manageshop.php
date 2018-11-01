@@ -35,26 +35,18 @@ class manageshop extends main{
     function query() {
         $page = $_GET['page'];
         $limit = $_GET['limit'];
+        $field = isset($_GET['field']) ? $_GET["field"] : "sid";
+        $order = isset($_GET['order']) ? $_GET["order"] : "asc";
         $db = new DB('shop');
         $offset = ($page-1)*$limit;
         $arr = $_GET;
         $arr = array_filter($arr);
         unset($arr['page']);
         unset($arr['limit']);
-        if (!count($arr)) {
-            $wheresql = '';
-        }
-        else {
-            $wheresql = " where ";
-            foreach($arr as $key => $v) {
-                $wheresql .= " $key='$v' and";
-            }
-            $wheresql = substr($wheresql,'0','-3');
-        }
-        $sql = "select * from $db->tablename $wheresql order by sid asc limit $offset,$limit";
-        $res = $db -> mysql -> query($sql) -> fetch_all(MYSQLI_ASSOC);
-        $result = $db -> where($arr) -> select('*');
-//        $res = $db ->where($arr) -> select('*') -> fetch_all(MYSQLI_ASSOC);
+        unset($arr['field']);
+        unset($arr['order']);
+        $res = $db -> where($arr) -> order($field,$order) -> limit($offset,$limit) -> select("*");
+        $result = $db -> where($arr) -> order($field,$order) -> select('*');
         $data = [];
         $data['code'] = 0;
         $data['msg'] = '数据获取成功';

@@ -5,8 +5,6 @@ class adminlogin extends main {
         parent::__construct();
     }
     function init() {
-        // assign(name:'',value:'') 页面中要写入的内容，调用时直接使用name即可显示出value值
-        $this -> smarty -> assign('name','朱晓琪');
         // display(‘’) 括号里写要打开的页面
         $this -> smarty -> display('adminlogin.html');
     }
@@ -29,8 +27,5 @@ class adminlogin extends main {
         else {
             echo "fail";
         }
-    }
-    function register() {
-        $this -> smarty -> display('register.html');
     }
 }

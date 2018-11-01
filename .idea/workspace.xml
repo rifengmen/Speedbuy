@@ -3,29 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="185a372e-0412-45ea-bf87-0e856c8a51da" name="默认更改列表" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/module/adminlogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/adminlogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/module/managecate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/managecate.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/module/manageshop.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/manageshop.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/module/upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/module/upload.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/view/editshop.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/editshop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/view/insertshop.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/insertshop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile/5a83b4a1b8912619f5bddbadd02bc35f5eb5e8f0_0.file.manageshop.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/compile/5a83b4a1b8912619f5bddbadd02bc35f5eb5e8f0_0.file.manageshop.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compile/83a502f77e6c1ce98a667fd73fe273f60ca52789_0.file.insertshop.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/compile/83a502f77e6c1ce98a667fd73fe273f60ca52789_0.file.insertshop.html.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compile/fb55e065e35c98dd0e900e0635950c271b34f614_0.file.editshop.html.php" beforeDir="false" afterPath="$PROJECT_DIR$/compile/fb55e065e35c98dd0e900e0635950c271b34f614_0.file.editshop.html.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/insertshop.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/insertshop.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/editshop.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/editshop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/insertshop.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/insertshop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/libs/db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/managecate.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/managecate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/js/manageshop.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/manageshop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091135868.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091136240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091267449.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091268535.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091273484.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091284672.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091289649.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091290971.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/15409131174.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091312098.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091318274.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploadimg/2018-10-30/154091318536.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,33 +36,33 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="14" />
-          <entry key="html" value="49" />
-          <entry key="js" value="40" />
-          <entry key="php" value="69" />
+          <entry key="html" value="58" />
+          <entry key="js" value="44" />
+          <entry key="php" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="14" />
-          <entry key="HTML" value="49" />
-          <entry key="JavaScript" value="40" />
-          <entry key="PHP" value="69" />
+          <entry key="HTML" value="58" />
+          <entry key="JavaScript" value="44" />
+          <entry key="PHP" value="81" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="878" />
-          <entry key="html" value="2450" />
-          <entry key="js" value="5030" />
-          <entry key="php" value="8473" />
+          <entry key="html" value="2458" />
+          <entry key="js" value="5070" />
+          <entry key="php" value="9098" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="879" />
-          <entry key="HTML" value="2453" />
-          <entry key="JavaScript" value="5026" />
-          <entry key="PHP" value="8473" />
+          <entry key="HTML" value="2461" />
+          <entry key="JavaScript" value="5066" />
+          <entry key="PHP" value="9098" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts" />
@@ -93,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/view/manageshop.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+            <state relative-caret-position="149">
+              <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
@@ -102,15 +88,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/module/manageshop.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state relative-caret-position="228">
+              <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
               <folding>
-                <element signature="n#__construct#0;n#manageshop#0;n#!!top" />
+                <element signature="n#init#0;n#manageshop#0;n#!!top" />
                 <element signature="n#insert#0;n#manageshop#0;n#!!top" />
                 <element signature="n#insert1#0;n#manageshop#0;n#!!top" />
+                <element signature="n#query#0;n#manageshop#0;n#!!top" />
                 <element signature="n#delete#0;n#manageshop#0;n#!!top" />
                 <element signature="n#edit#0;n#manageshop#0;n#!!top" />
                 <element signature="n#update#0;n#manageshop#0;n#!!top" />
@@ -122,81 +109,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/js/manageshop.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-910">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="292">
+              <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-                <element signature="e#2908#2997#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/insertshop.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#5;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#9;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#10;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#10;n#form#0;n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/insertshop.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="43" selection-start-line="43" selection-end-line="74" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/editshop.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="89" column="59" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#0;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#4;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#5;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#6;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-                <element signature="n#div#6;n#form#0;n#div#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/js/editshop.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
-              <folding>
-                <element signature="e#200#1076#0" />
-                <element signature="e#1130#1207#0" />
-                <element signature="e#1261#1349#0" />
-                <element signature="e#1383#2185#0" />
-                <element signature="e#2248#2428#0" />
-                <element signature="e#2463#2551#0" />
               </folding>
             </state>
           </provider>
@@ -226,9 +142,7 @@
       <list>
         <option value="$PROJECT_DIR$/libs/Router.php" />
         <option value="$PROJECT_DIR$/app/view/register.html" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/static/css/adminlogin.css" />
-        <option value="$PROJECT_DIR$/app/module/adminlogin.php" />
         <option value="$PROJECT_DIR$/static/js/adminlogin.js" />
         <option value="$PROJECT_DIR$/static/js/querycategory.js" />
         <option value="$PROJECT_DIR$/app/view/querycategory.html" />
@@ -244,20 +158,22 @@
         <option value="$PROJECT_DIR$/static/js/editcate.js" />
         <option value="$PROJECT_DIR$/static/js/insertcate.js" />
         <option value="$PROJECT_DIR$/app/view/slide.html" />
-        <option value="$PROJECT_DIR$/app/module/managecate.php" />
-        <option value="$PROJECT_DIR$/static/js/managecate.js" />
         <option value="$PROJECT_DIR$/libs/functionshop.php" />
         <option value="$PROJECT_DIR$/libs/function.php" />
         <option value="$PROJECT_DIR$/app/view/insertshop.html" />
         <option value="$PROJECT_DIR$/static/css/insertshop.css" />
         <option value="$PROJECT_DIR$/static/js/insertshop.js" />
-        <option value="$PROJECT_DIR$/libs/db.php" />
+        <option value="$PROJECT_DIR$/app/module/upload.php" />
+        <option value="$PROJECT_DIR$/static/js/editshop.js" />
+        <option value="$PROJECT_DIR$/app/module/adminlogin.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/view/manageshop.html" />
         <option value="$PROJECT_DIR$/app/view/editshop.html" />
         <option value="$PROJECT_DIR$/app/module/manageshop.php" />
-        <option value="$PROJECT_DIR$/app/module/upload.php" />
-        <option value="$PROJECT_DIR$/app/view/manageshop.html" />
+        <option value="$PROJECT_DIR$/libs/db.php" />
         <option value="$PROJECT_DIR$/static/js/manageshop.js" />
-        <option value="$PROJECT_DIR$/static/js/editshop.js" />
+        <option value="$PROJECT_DIR$/app/module/managecate.php" />
+        <option value="$PROJECT_DIR$/static/js/managecate.js" />
       </list>
     </option>
   </component>
@@ -270,7 +186,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="863" />
     <option name="width" value="1065" />
     <option name="height" value="1000" />
@@ -319,12 +235,6 @@
               <item name="speedbuy" type="b2602c69:ProjectViewProjectNode" />
               <item name="speedbuy" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="speedbuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="speedbuy" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -346,7 +256,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -386,15 +296,15 @@
       <workItem from="1540693578371" duration="3494000" />
       <workItem from="1540729927481" duration="38104000" />
       <workItem from="1540858426548" duration="16592000" />
-      <workItem from="1540894617430" duration="37017000" />
+      <workItem from="1540894617430" duration="47513000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193249000" />
+    <option name="totallyTimeSpent" value="203745000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19623657" />
@@ -418,6 +328,28 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19623657" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290993" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3297414" />
+      <window_info anchor="bottom" id="调试" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -430,13 +362,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/libs/db.php</url>
-          <line>19</line>
+          <line>23</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/module/manageshop.php</url>
-          <line>22</line>
-          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -524,27 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/Router.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/module/adminlogin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/insertcate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -569,23 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/managecate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1870">
-          <caret line="55" column="7" lean-forward="true" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/view/slide.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -605,30 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/module/managecate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="83" column="23" selection-start-line="83" selection-start-column="23" selection-end-line="83" selection-end-column="23" />
-          <folding>
-            <element signature="n#__construct#0;n#managecate#0;n#!!top" />
-            <element signature="n#init#0;n#managecate#0;n#!!top" />
-            <element signature="n#insert#0;n#managecate#0;n#!!top" />
-            <element signature="n#insert1#0;n#managecate#0;n#!!top" />
-            <element signature="n#query#0;n#managecate#0;n#!!top" />
-            <element signature="n#delete#0;n#managecate#0;n#!!top" />
-            <element signature="n#edit#0;n#managecate#0;n#!!top" />
-            <element signature="n#update#0;n#managecate#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/managecate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="76" column="13" lean-forward="true" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/libs/functionshop.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -643,39 +508,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/libs/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/insertshop.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/libs/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding>
-            <element signature="n#__construct#0;n#DB#0;n#!!top" />
-            <element signature="n#config#0;n#DB#0;n#!!top" />
-            <element signature="n#delete#0;n#DB#0;n#!!top" />
-            <element signature="n#update#0;n#DB#0;n#!!top" />
-            <element signature="n#select#0;n#DB#0;n#!!top" />
-            <element signature="n#where#0;n#DB#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -693,86 +529,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/insertshop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#4;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#5;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#9;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#10;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#10;n#form#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/module/upload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="81" column="39" lean-forward="true" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/module/manageshop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding>
-            <element signature="n#__construct#0;n#manageshop#0;n#!!top" />
-            <element signature="n#insert#0;n#manageshop#0;n#!!top" />
-            <element signature="n#insert1#0;n#manageshop#0;n#!!top" />
-            <element signature="n#delete#0;n#manageshop#0;n#!!top" />
-            <element signature="n#edit#0;n#manageshop#0;n#!!top" />
-            <element signature="n#update#0;n#manageshop#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/manageshop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/editshop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="89" column="59" selection-start-line="89" selection-start-column="59" selection-end-line="89" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#0;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#4;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#5;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#6;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
-            <element signature="n#div#6;n#form#0;n#div#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/manageshop.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-910">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
-            <element signature="e#2908#2997#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -794,6 +554,174 @@
             <element signature="e#1383#2185#0" />
             <element signature="e#2248#2428#0" />
             <element signature="e#2463#2551#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1598">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/module/adminlogin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding>
+            <element signature="n#__construct#0;n#adminlogin#0;n#!!top" />
+            <element signature="n#init#0;n#adminlogin#0;n#!!top" />
+            <element signature="n#check#0;n#adminlogin#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/editshop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="97" column="44" lean-forward="true" selection-start-line="97" selection-start-column="44" selection-end-line="97" selection-end-column="44" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#4;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#5;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#6;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/insertshop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-936">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#1;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#4;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#5;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#7;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#8;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#9;n#form#0;n#div#0;n#!!top" />
+            <element signature="n#div#10;n#form#0;n#div#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/manageshop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="34" column="52" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="77" column="9" selection-start-line="77" selection-start-column="9" selection-end-line="77" selection-end-column="9" />
+          <folding>
+            <element signature="n#__construct#0;n#DB#0;n#!!top" />
+            <element signature="n#config#0;n#DB#0;n#!!top" />
+            <element signature="n#insert#0;n#DB#0;n#!!top" />
+            <element signature="n#delete#0;n#DB#0;n#!!top" />
+            <element signature="n#update#0;n#DB#0;n#!!top" />
+            <element signature="n#where#0;n#DB#0;n#!!top" />
+            <element signature="n#order#0;n#DB#0;n#!!top" />
+            <element signature="n#order#1;n#DB#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/managecate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="55" column="7" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/manageshop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/module/managecate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="47" column="26" lean-forward="true" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+          <folding>
+            <element signature="n#__construct#0;n#managecate#0;n#!!top" />
+            <element signature="n#init#0;n#managecate#0;n#!!top" />
+            <element signature="n#insert#0;n#managecate#0;n#!!top" />
+            <element signature="n#insert1#0;n#managecate#0;n#!!top" />
+            <element signature="n#delete#0;n#managecate#0;n#!!top" />
+            <element signature="n#edit#0;n#managecate#0;n#!!top" />
+            <element signature="n#update#0;n#managecate#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/managecate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="4" column="42" lean-forward="true" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/module/manageshop.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="21" column="15" lean-forward="true" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+          <folding>
+            <element signature="n#init#0;n#manageshop#0;n#!!top" />
+            <element signature="n#insert#0;n#manageshop#0;n#!!top" />
+            <element signature="n#insert1#0;n#manageshop#0;n#!!top" />
+            <element signature="n#query#0;n#manageshop#0;n#!!top" />
+            <element signature="n#delete#0;n#manageshop#0;n#!!top" />
+            <element signature="n#edit#0;n#manageshop#0;n#!!top" />
+            <element signature="n#update#0;n#manageshop#0;n#!!top" />
           </folding>
         </state>
       </provider>

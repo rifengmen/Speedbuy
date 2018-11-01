@@ -3,10 +3,10 @@ table.render({
     elem: '#test',
     cols: [[
         {type: 'checkbox', fixed: 'left'},
-        {field: 'cid', width: 180, title: 'CID',},
-         {field: 'title', width: 220, title: '栏目标题'},
+        {field: 'cid', width: 180, title: 'CID', sort: true},
+         {field: 'title', width: 220, title: '栏目标题', sort: true},
         {field: 'thumb', width: 320, title: '缩略图', templet:'<div><img src="{{ d.thumb}}" width="50"></div>'},
-        {field: 'pid', width: 220, title: 'PID'},
+        {field: 'pid', width: 220, title: 'PID', sort: true},
         {fixed: 'right', width:240, align:'center', toolbar: '#toolbar',title: "操作"}
     ]],
     url: '/speedbuy/index.php/managecate/query',
@@ -22,7 +22,21 @@ table.render({
     limits: [5,8,15,20,30],
     loading: true,
     toolbar: "#toolbar2",
-    id: 'table1'
+    id: 'table1',
+    autoSort: false
+});
+//监听排序事件
+table.on('sort(test)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+    table.reload('table1', {
+        initSort: obj ,//记录初始排序，如果不设的话，将无法标记表头的排序状态。
+        where: { //请求参数（注意：这里面的参数可任意定义，并非下面固定的格式）
+            field: obj.field, //排序字段
+            order: obj.type //排序方式
+        },
+        page: {
+            curr: 1 //重新从第 1 页开始
+        },
+    });
 });
 //头工具栏事件
 table.on('toolbar(test)', function(obj){
