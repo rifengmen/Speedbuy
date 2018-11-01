@@ -69,6 +69,7 @@ imgbox2.on("click",".layui-icon-delete",function () {
     views.val(nstr);
     return false;
 });
+// 放大图片
 imgbox2.on("click",".layui-icon-search",function () {
     $(this).closest("li").css({"width":"300px","height":"300px"});
     return false;

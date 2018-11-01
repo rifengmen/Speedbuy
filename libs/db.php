@@ -5,6 +5,7 @@ class DB{
     private $wheresql;
     private $ordersql;
     private $limitsql;
+    // 构造函数
     function __construct($tablename)
     {
         $this -> config();
@@ -13,6 +14,7 @@ class DB{
         $this -> ordersql = "";
         $this -> limitsql = "";
     }
+    // 连接数据库
     function config() {
         $this -> mysql = new mysqli('localhost','root','','speedbuy','3306');
         if ($this -> mysql -> connect_errno) {
@@ -21,6 +23,7 @@ class DB{
         }
         $this -> mysql -> query('set names utf8');
     }
+    // 数据库插入数据
     function insert($data) {
         if (is_array($data)) {
             $keys = array_keys($data);
@@ -40,6 +43,7 @@ class DB{
         $this -> mysql -> query($sql);
         return $this -> mysql -> affected_rows;
     }
+    // 数据库删除单条数据
     function delete($sql) {
         $sql = $sql;
         if (strpos($sql,"delete") !== false) {
@@ -51,6 +55,13 @@ class DB{
         }
         return $this -> mysql -> affected_rows;
     }
+    // 数据库删除多条数据
+    function deletes($sid) {
+        $sql = "delete from $this->tablename where sid in ($sid)";
+        $this -> mysql -> query($sql);
+        return $this -> mysql -> affected_rows;
+    }
+    // 数据库修改数据
     function update($str) {
         if (is_string($str) && strpos($str,'update') !== false) {
             $sql = $str;
@@ -68,6 +79,7 @@ class DB{
         $this -> mysql -> query($sql);
         return $this -> mysql -> affected_rows;
     }
+    // 数据库查询数据
     function select($str) {
         if (is_string($str) && strpos($str,'select') !== false) {
             $sql = $str;
@@ -79,6 +91,7 @@ class DB{
         $res = $this -> mysql -> query($sql) -> fetch_all(MYSQLI_ASSOC);
         return $res;
     }
+    // 指定数据库查询的字段
     function where($arr) {
         if (is_string($arr)) {
             $this -> wheresql = " where $arr ";
@@ -92,10 +105,12 @@ class DB{
         }
         return $this;
     }
+    // 指定排序规则
     function order($key,$type) {
         $this -> ordersql = " order by $key $type ";
         return $this;
     }
+    // 指定分页页码和显示条数
     function limit($offset,$limit) {
         $this -> ordersql = " limit $offset,$limit ";
         return $this;

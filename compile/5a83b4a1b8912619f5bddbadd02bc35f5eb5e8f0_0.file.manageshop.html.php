@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-10-31 09:18:32
+/* Smarty version 3.1.33, created on 2018-11-01 03:59:09
   from 'D:\wamp64\www\speedbuy\app\view\manageshop.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bd97368aceb75_23009533',
+  'unifunc' => 'content_5bda7a0dd2c6b9_93487774',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '5a83b4a1b8912619f5bddbadd02bc35f5eb5e8f0' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\manageshop.html',
-      1 => 1540976914,
+      1 => 1541044747,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bd97368aceb75_23009533 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bda7a0dd2c6b9_93487774 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -72,6 +72,7 @@ $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_s
             <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
             <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
             <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
+            <button class="layui-btn layui-btn-sm" lay-event="Alldelete">删除选中项</button>
         </div>
     <?php echo '</script'; ?>
 >

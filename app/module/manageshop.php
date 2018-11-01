@@ -66,11 +66,23 @@ class manageshop extends main{
             echo json_encode(['code' => 1,'msg' => '删除失败']);
         }
     }
+    // 多个店铺同时删除指令
+    function deletes() {
+        $sid = $_GET['sid'];
+        $db = new DB('shop');
+        $rows = $db -> deletes($sid);
+        if ($rows > 0 ) {
+            echo json_encode(["code" => 0, "msg" => "删除成功"]);
+        }
+        else {
+            echo json_encode(["code" => 1, "msg" => "删除失败"]);
+        }
+    }
     // 展示修改店铺内容页面
     function edit() {
         $sid = $_GET['sid'];
-        $cid = $_GET['cid'];
         $db = new DB('shop');
+//        $sql = "select shop.*,category.title from shop,category where shop.cid=category.cid";
         $res = $db -> where("sid=$sid") -> select('*')[0];
         $vstr = $res['views'];
         $arr = explode(',',$vstr);

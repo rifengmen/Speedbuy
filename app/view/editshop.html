@@ -9,7 +9,11 @@
             <div class="layui-input-block">
                 <select name="cid" lay-verify="required">
                     {foreach $str as $key=>$v}
+                    {if $res.cid == $v['cid']}
+                    <option value="{$v['cid']}" selected>{$v['title']}</option>
+                    {else}
                     <option value="{$v['cid']}">{$v['title']}</option>
+                    {/if}
                     {/foreach}
                 </select>
             </div>

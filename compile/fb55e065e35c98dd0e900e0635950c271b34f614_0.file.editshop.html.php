@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-01 02:08:39
+/* Smarty version 3.1.33, created on 2018-11-01 10:53:05
   from 'D:\wamp64\www\speedbuy\app\view\editshop.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bda602757b0b2_51579201',
+  'unifunc' => 'content_5bdadb118549c6_07137017',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fb55e065e35c98dd0e900e0635950c271b34f614' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\editshop.html',
-      1 => 1541038115,
+      1 => 1541069584,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bda602757b0b2_51579201 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bdadb118549c6_07137017 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -41,9 +41,15 @@ $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->t
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['key']->value => $_smarty_tpl->tpl_vars['v']->value) {
 ?>
+                    <?php if ($_smarty_tpl->tpl_vars['res']->value['cid'] == $_smarty_tpl->tpl_vars['v']->value['cid']) {?>
+                    <option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['cid'];?>
+" selected><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</option>
+                    <?php } else { ?>
                     <option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['cid'];?>
 "><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
 </option>
+                    <?php }?>
                     <?php
 }
 }

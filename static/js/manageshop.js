@@ -6,8 +6,8 @@ table.render({
         {field: 'sid', width: 120, title: 'SID', sort: true},
          {field: 'shopname', width: 100, title: '店铺名称', sort: true},
         {field: 'thumb', width: 120, title: '缩略图', templet:'<div><img src="{{ d.sthumb}}" width="50" height="50"></div>'},
-        {field: 'sale', width: 120, title: '销量', sort: true},
-        {field: 'score', width: 120, title: '评分', sort: true},
+        {field: 'sale', width: 100, title: '销量', sort: true},
+        {field: 'score', width: 100, title: '评分', sort: true},
         {field: 'notice', width: 120, title: '公告'},
         {field: 'fee', width: 120, title: '配送费', sort: true},
         {field: 'views', width: 200, title: '实景图片', templet:function (d) {
@@ -69,6 +69,31 @@ table.on('toolbar(test)', function(obj){
         case 'isAll':
             layer.msg(checkStatus.isAll ? '全选': '未全选');
             break;
+        case 'Alldelete':
+            let data3 = checkStatus.data;
+            let arr = data3.map(ele => ele.sid);
+            $.ajax({
+                url: "/speedbuy/index.php/manageshop/deletes",
+                data: {sid:arr.join()},
+                dataType: "json",
+                success: function (res) {
+                    if (res.code == 0) {
+                        location.href = "/speedbuy/index.php/manageshop";
+                    }
+                    else {
+                        layer.open({
+                            type: 1,
+                            title: ['提示', 'font-size:18px;background:red;color:#fff;'], //显示标题栏默认false
+                            area: '300px;',
+                            closeBtn: 2,
+                            time: 3000,
+                            anim: 1,
+                            content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;font-size: 20px;">店铺删除失败！</div>',
+                        });
+                    }
+                }
+            })
+            break;
     };
 });
 //监听行工具事件
@@ -87,7 +112,7 @@ table.on('tool(test)', function(obj){
             layer.close(index);
         });
     } else if(obj.event === 'edit') {
-        location.href = "/speedbuy/index.php/manageshop/edit?sid=" + data.sid + "&cid=" + data.cid;
+        location.href = "/speedbuy/index.php/manageshop/edit?sid=" + data.sid;
     }
 });
 let active = {
