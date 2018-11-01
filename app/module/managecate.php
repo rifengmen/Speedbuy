@@ -1,15 +1,18 @@
 <?php
 class managecate extends main {
+    // 构造函数
     function __construct()
     {
         parent::__construct();
         session_start();
         $this -> info = $_SESSION['info'];
     }
+    // 显示页面
     function init() {
         $this -> smarty -> assign('info',$this -> info);
         $this -> smarty -> display('managecate.html');
     }
+    // 显示添加栏目页面
     function insert() {
     $db = new DB('category');
     $obj = new Menu();
@@ -18,6 +21,7 @@ class managecate extends main {
     $this -> smarty -> assign('info',$this -> info);
     $this -> smarty -> display('insertcate.html');
     }
+    // 数据库添加栏目
     function insert1() {
         $data = $_GET;
         $db = new DB('category');
@@ -29,6 +33,7 @@ class managecate extends main {
             echo json_encode(['code' => 1,'msg' => '栏目插入失败']);
         }
     }
+    // 查看数据库数据
     function query() {
         $page = $_GET['page'];
         $limit = $_GET['limit'];
@@ -51,6 +56,7 @@ class managecate extends main {
         $data['data'] = $res;
         echo json_encode($data);
     }
+    // 删除数据库数据
     function delete() {
         $cid = $_GET['cid'];
         $db = new DB('category');
@@ -62,6 +68,7 @@ class managecate extends main {
             echo json_encode(['code' => 1,'msg' => '删除失败']);
         }
     }
+    // 显示编辑栏目页面
     function edit() {
         $cid = $_GET['cid'];
         $db = new DB('category');
@@ -73,6 +80,7 @@ class managecate extends main {
         $this -> smarty -> assign('info',$this -> info);
         $this -> smarty -> display("edit.html");
     }
+    // 提交编辑后的栏目给数据库
     function update() {
         $data = $_GET;
         $cid = $_GET['cid'];
