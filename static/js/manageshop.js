@@ -1,4 +1,6 @@
+// 解构赋值
 let {table,$,jquery,layer} = layui;
+// 渲染数据表格
 table.render({
     elem: '#test',
     cols: [[
@@ -115,6 +117,7 @@ table.on('tool(test)', function(obj){
         location.href = "/speedbuy/index.php/manageshop/edit?sid=" + data.sid;
     }
 });
+// 声明一个搜索方法，根据输入的条件
 let active = {
     reload: function() {
         let sid = $('#sid').val();
@@ -133,6 +136,7 @@ let active = {
         });
     }
 };
+// 执行搜索方法
 $('.demoTable .layui-btn').on('click', function(){
     let type = $(this).data('type');
     active[type] ? active[type].call(this) : '';

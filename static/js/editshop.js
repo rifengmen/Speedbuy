@@ -1,9 +1,16 @@
+// 解构赋值
 let {form,$,jquery,upload,layer} = layui;
+// 获取用于存放缩略图地址的隐藏input
 let sthumb = $("input:hidden[name=sthumb]");
+// 获取用于存放实景图地址的隐藏input
 let views = $("input:hidden[name=views]");
+// 获取缩略图预览模块
 let imgbox = $(".imgBox");
+// 获取实景图预览模块
 let imgbox2 = $(".imgBox2");
+// 获取获取实景图地址字符串并转化为数组
 let arr = views.val().split(",");
+// 图片上传
 upload.render({
     elem: '#test1',
     acceptMime: 'image/jpg, image/png, image/jpeg, image/webp, image/gif',
@@ -29,11 +36,13 @@ upload.render({
         }
     }
 });
+// 删除图片-缩略图
 imgbox.on("click",".layui-icon-delete",function () {
     $(this).closest("li").remove();
     sthumb.val('');
     return false;
 });
+//放大图片-缩略图
 imgbox.on("click",".layui-icon-search",function () {
     $(this).closest("li").css({"width":"300px","height":"300px"});
     return false;
@@ -60,7 +69,7 @@ upload.render({
         views.val(nstr);
     }
 });
-// 删除图片
+// 删除图片-实景图
 imgbox2.on("click",".layui-icon-delete",function () {
     let index = $(this).closest("li").index();
     $(this).closest("li").remove();
@@ -69,11 +78,12 @@ imgbox2.on("click",".layui-icon-delete",function () {
     views.val(nstr);
     return false;
 });
-// 放大图片
+// 放大图片-实景图
 imgbox2.on("click",".layui-icon-search",function () {
     $(this).closest("li").css({"width":"300px","height":"300px"});
     return false;
 });
+// 提交数据到后台
 form.on("submit(submit)",function (data) {
     let qs2 = $("form").serialize();
     if (!data.field.sthumb || !data.field.views) {
