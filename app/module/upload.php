@@ -27,7 +27,7 @@ class upload{
             9 => '上传文件格式错误'
         ];
     }
-    
+
     // 1.是否为上传文件
     //  is_uploaded_file()
     // 2.创建目录 uploadimg/日期/文件

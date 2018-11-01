@@ -1,5 +1,6 @@
 <?php
 class Router{
+    // 验证跳转路径
     static function init() {
         if (!isset($_SERVER['PATH_INFO']) || $_SERVER['PATH_INFO'] == "/") {
             $module = "index";
