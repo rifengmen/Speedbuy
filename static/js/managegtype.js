@@ -5,7 +5,7 @@ table.render({
         {type: 'checkbox', fixed: 'left'},
         {field: 'gid', width: 180, title: 'GID', sort: true},
         {field: 'title', width: 220, title: '栏目标题', edit: 'text', sort: true},
-        {field: 'sid', width: 220, title: 'SID', sort: true},
+        {field: 'shopname', width: 220, title: '所属店铺', sort: true},
         {fixed: 'right', width:240, align:'center', toolbar: '#toolbar',title: "操作"}
     ]],
     url: '/speedbuy/index.php/managegtype/query',
@@ -81,6 +81,14 @@ table.on('toolbar(test)', function(obj){
 });
 //监听行工具事件
 table.on('tool(test)', function(obj) {
+    // 在没有form表单的时候可以用formdata来设置表单数据，可以直接用jquery直接获取，也可以用append添加，但是提交方式必须是post，必须设置contentType:false,头信息不用加工，设置 processData:false,告诉jquery不用加工信息
+    // let fd = new FormData();
+    // let gid = obj.data.gid;
+    // let title = obj.data.title;
+    // let sid = obj.data.sid;
+    // fd.append("gid",gid);
+    // fd.append("title",title);
+    // fd.append("sid",sid);
     let data = obj.data;
     if (obj.event === 'del') {
         layer.confirm('真的删除行么', function (index) {
@@ -95,6 +103,8 @@ table.on('tool(test)', function(obj) {
             layer.close(index);
         });
     } else if (obj.event === 'edit') {
+        //设定动画，防止在数据库还未完成时再次发出修改指令
+        let index = layer.load(6, {time: 5*1000});
         $.ajax({
             url: "/speedbuy/index.php/managegtype/update",
             data: {
@@ -105,6 +115,7 @@ table.on('tool(test)', function(obj) {
             type: "post",
             dataType: 'json',
             success: function (res) {
+                layer.close(index);
                 if (res.code == 0) {
                     layer.open({
                         type: 1,

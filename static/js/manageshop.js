@@ -24,7 +24,7 @@ table.render({
         {field: 'slogan', width: 120, title: '口号'},
         {field: 'stype', width: 120, title: '经营范围'},
         {field: 'sphone', width: 120, title: '店铺电话'},
-        {field: 'cid', width: 120, title: '所属分类', sort: true},
+        {field: 'title', width: 120, title: '所属分类', sort: true},
         {fixed: 'right', width:200, align:'center', toolbar: '#toolbar', title: '操作'}
     ]],
     url: '/speedbuy/index.php/manageshop/query',

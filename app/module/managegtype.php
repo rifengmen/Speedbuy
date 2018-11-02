@@ -38,7 +38,7 @@ class managegtype extends main {
         $limit = $_GET['limit'];
         $field = isset($_GET['field']) ? $_GET["field"] : "sid";
         $order = isset($_GET['order']) ? $_GET["order"] : "asc";
-        $db = new DB('goodstype');
+        $db = new DB('goodstype,shop');
         $offset = ($page-1)*$limit;
         $arr = $_GET;
         $arr = array_filter($arr);
@@ -46,7 +46,9 @@ class managegtype extends main {
         unset($arr['limit']);
         unset($arr['field']);
         unset($arr['order']);
-        $res = $db -> where($arr) -> order($field,$order) -> limit($offset,$limit) -> select("*");
+        $str = "goodstype.sid=shop.sid";
+        $res = $db -> where($str) -> order($field,$order) -> limit($offset,$limit) -> select("goodstype.*,shop.shopname");
+        $db = new DB('goodstype');
         $result = $db -> where($arr) -> order($field,$order) -> select('*');
         $data = [];
         $data['code'] = 0;
