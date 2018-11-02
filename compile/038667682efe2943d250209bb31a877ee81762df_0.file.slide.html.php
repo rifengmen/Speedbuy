@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-02 01:06:17
+/* Smarty version 3.1.33, created on 2018-11-02 09:34:36
   from 'D:\wamp64\www\speedbuy\app\view\slide.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bdba30949e4a9_93913740',
+  'unifunc' => 'content_5bdc1a2caaf642_57858901',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '038667682efe2943d250209bb31a877ee81762df' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\slide.html',
-      1 => 1541120772,
+      1 => 1541150921,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bdba30949e4a9_93913740 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bdc1a2caaf642_57858901 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="layui-side layui-bg-black">
     <div class="layui-side-scroll">
         <!-- 左侧导航区域 -->
@@ -44,6 +44,13 @@ function content_5bdba30949e4a9_93913740 (Smarty_Internal_Template $_smarty_tpl)
                 <dl class="layui-nav-child">
                     <dd><a href="/speedbuy/index.php/managegtype/insert">添加商品分类</a></dd>
                     <dd><a href="/speedbuy/index.php/managegtype">查看商品分类</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item layui-nav-itemed">
+                <a class="" href="javascript:;">商品管理</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="/speedbuy/index.php/managegoods/insert">添加商品</a></dd>
+                    <dd><a href="/speedbuy/index.php/managegoods">查看商品</a></dd>
                 </dl>
             </li>
         </ul>

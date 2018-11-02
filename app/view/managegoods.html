@@ -18,23 +18,23 @@
 </style>
 <div class="layui-body" style="padding: 50px">
     <div class="demoTable">
-        搜索GID：
+        搜索ID：
         <div class="layui-inline">
-            <input class="layui-input" name="gid" id="gid" autocomplete="off">
+            <input class="layui-input" name="id" id="id" autocomplete="off">
         </div>
-        搜索分类名称：
+        搜索商品名称：
         <div class="layui-inline">
             <input class="layui-input" name="title" id="title" autocomplete="off">
         </div>
-        搜索店铺：
+        搜索所属分类：
         <div class="layui-inline">
-            <input class="layui-input" name="sid" id="sid" autocomplete="off">
+            <input class="layui-input" name="gid" id="gid" autocomplete="off">
         </div>
         <button class="layui-btn" data-type="reload">搜索</button>
     </div>
     <table class="layui-hide" id="test" lay-filter="test"></table>
     <script type="text/html" id="toolbar">
-        <a class="layui-btn layui-btn-xs edits" lay-event="edit">保存</a>
+        <a class="layui-btn layui-btn-xs edits" lay-event="edit">编辑</a>
         <a class="layui-btn layui-btn-danger layui-btn-xs dels" lay-event="del">删除</a>
     </script>
     <script type="text/html" id="toolbar2">
@@ -52,6 +52,6 @@
 </div>
 </div>
 <script src="{LAYUIJS_PATH}layui.all.js"></script>
-<script src="{JS_PATH}managegtype.js"></script>
+<script src="{JS_PATH}managegoods.js"></script>
 </body>
 </html>

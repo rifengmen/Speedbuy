@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-02 12:40:00
-  from 'D:\wamp64\www\speedbuy\app\view\managegtype.html' */
+/* Smarty version 3.1.33, created on 2018-11-02 09:34:40
+  from 'D:\wamp64\www\speedbuy\app\view\managegoods.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bdc45a021e856_57446209',
+  'unifunc' => 'content_5bdc1a302e6391_33640150',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '089571d1a1fe654ab73ff5abf470163875e031e0' => 
+    '79819d729da4846e7db78e7d565f769bc2e3271d' => 
     array (
-      0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\managegtype.html',
-      1 => 1541162398,
+      0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\managegoods.html',
+      1 => 1541151272,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bdc45a021e856_57446209 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bdc1a302e6391_33640150 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -45,24 +45,24 @@ $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_s
 </style>
 <div class="layui-body" style="padding: 50px">
     <div class="demoTable">
-        搜索GID：
+        搜索ID：
         <div class="layui-inline">
-            <input class="layui-input" name="gid" id="gid" autocomplete="off">
+            <input class="layui-input" name="id" id="id" autocomplete="off">
         </div>
-        搜索分类名称：
+        搜索商品名称：
         <div class="layui-inline">
             <input class="layui-input" name="title" id="title" autocomplete="off">
         </div>
-        搜索店铺：
+        搜索所属分类：
         <div class="layui-inline">
-            <input class="layui-input" name="sid" id="sid" autocomplete="off">
+            <input class="layui-input" name="gid" id="gid" autocomplete="off">
         </div>
         <button class="layui-btn" data-type="reload">搜索</button>
     </div>
     <table class="layui-hide" id="test" lay-filter="test"></table>
     <?php echo '<script'; ?>
  type="text/html" id="toolbar">
-        <a class="layui-btn layui-btn-xs edits" lay-event="edit">保存</a>
+        <a class="layui-btn layui-btn-xs edits" lay-event="edit">编辑</a>
         <a class="layui-btn layui-btn-danger layui-btn-xs dels" lay-event="del">删除</a>
     <?php echo '</script'; ?>
 >
@@ -88,7 +88,7 @@ layui.all.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo JS_PATH;?>
-managegtype.js"><?php echo '</script'; ?>
+managegoods.js"><?php echo '</script'; ?>
 >
 </body>
 </html><?php }
