@@ -56,8 +56,8 @@ class DB{
         return $this -> mysql -> affected_rows;
     }
     // 数据库删除多条数据
-    function deletes($sid) {
-        $sql = "delete from $this->tablename where sid in ($sid)";
+    function deletes($field,$str) {
+        $sql = "delete from $this->tablename where $field in ($str)";
         $this -> mysql -> query($sql);
         return $this -> mysql -> affected_rows;
     }

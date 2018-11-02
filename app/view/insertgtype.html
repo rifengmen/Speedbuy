@@ -1,0 +1,37 @@
+{include file='header.html'};
+{include file='slide.html'};
+<div class="layui-body" style="padding: 50px">
+    <form class="layui-form" action="">
+        <div class="layui-form-item">
+            <label class="layui-form-label">店铺名称</label>
+            <div class="layui-input-block">
+                <select name="sid" lay-verify="required">
+                    {foreach $str as $v}
+                    <option value="{$v['sid']}"> {$v['shopname']} </option>
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">分类名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submit">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="layui-footer">
+    <!-- 底部固定区域 -->
+    版权属于我
+</div>
+</div>
+<script src="{LAYUIJS_PATH}layui.all.js"></script>
+<script src="{JS_PATH}insertgtype.js"></script>
+</body>
+</html>

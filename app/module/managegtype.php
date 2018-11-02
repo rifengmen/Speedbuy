@@ -1,28 +1,29 @@
 <?php
-class manageshop extends main{
+class managegtype extends main {
+    // 构造函数
     function __construct()
     {
         parent::__construct();
         session_start();
         $this -> info = $_SESSION['info'];
     }
-    // 展示查看店铺页面
+    // 显示页面
     function init() {
-        $this -> smarty -> assign("info",$this->info);
-        $this -> smarty -> display("manageshop.html");
+        $this -> smarty -> assign('info',$this -> info);
+        $this -> smarty -> display('managegtype.html');
     }
-    // 展示添加店铺页面
+    // 显示添加商品分类页面
     function insert() {
-        $db = new DB('category');
-        $str = $db -> where("pid!=0") -> select("*");
+        $db = new DB('shop');
+        $str = $db -> select("sid,shopname");
         $this -> smarty -> assign('str',$str);
         $this -> smarty -> assign('info',$this -> info);
-        $this -> smarty -> display('insertshop.html');
+        $this -> smarty -> display('insertgtype.html');
     }
-    // 执行添加店铺指令
+    // 数据库添加商品分类
     function insert1() {
-        $data = $_POST;
-        $db = new DB('shop');
+        $data = $_GET;
+        $db = new DB('goodstype');
         $rows = $db -> insert($data);
         if ($rows == 1) {
             echo json_encode(['code' => 0,'msg' => '栏目插入成功']);
@@ -31,13 +32,13 @@ class manageshop extends main{
             echo json_encode(['code' => 1,'msg' => '栏目插入失败']);
         }
     }
-    // 执行查看店铺指令
+    // 查看数据库数据
     function query() {
         $page = $_GET['page'];
         $limit = $_GET['limit'];
         $field = isset($_GET['field']) ? $_GET["field"] : "sid";
         $order = isset($_GET['order']) ? $_GET["order"] : "asc";
-        $db = new DB('shop');
+        $db = new DB('goodstype');
         $offset = ($page-1)*$limit;
         $arr = $_GET;
         $arr = array_filter($arr);
@@ -54,11 +55,11 @@ class manageshop extends main{
         $data['data'] = $res;
         echo json_encode($data);
     }
-    // 执行删除店铺指令
+    // 删除数据库数据
     function delete() {
-        $sid = $_GET['sid'];
-        $db = new DB('shop');
-        $rows = $db -> delete("sid=$sid");
+        $gid = $_GET['gid'];
+        $db = new DB('goodstype');
+        $rows = $db -> delete("gid=$gid");
         if ($rows == 1) {
             echo json_encode(['code' => 0,'msg' => '删除成功']);
         }
@@ -66,47 +67,42 @@ class manageshop extends main{
             echo json_encode(['code' => 1,'msg' => '删除失败']);
         }
     }
-    // 多个店铺同时删除指令
+    // 删除多条数据
     function deletes() {
-        $sid = $_GET['sid'];
-        $db = new DB('shop');
-        $rows = $db -> deletes("sid",$sid);
-        if ($rows > 0 ) {
-            echo json_encode(["code" => 0, "msg" => "删除成功"]);
+        $gid = $_GET["gid"];
+        $db = new DB("goodstype");
+        $rows = $db -> deletes("gid",$gid);
+        if ($rows > 0) {
+            echo json_encode(['code' => 0,'msg' => '删除成功']);
         }
         else {
-            echo json_encode(["code" => 1, "msg" => "删除失败"]);
+            echo json_encode(['code' => 1,'msg' => '删除失败']);
         }
     }
-    // 展示修改店铺内容页面
+    // 显示编辑商品分类页面
     function edit() {
-        $sid = $_GET['sid'];
-        $db = new DB('shop');
-//        $sql = "select shop.*,category.title from shop,category where shop.cid=category.cid";
-        $res = $db -> where("sid=$sid") -> select('*')[0];
-        $vstr = $res['views'];
-        $arr = explode(',',$vstr);
-        $db = new DB('category');
-        $str = $db -> where("pid!=0") -> select("*");
-        $this -> smarty -> assign('str',$str);
+        $gid = $_GET['gid'];
+        $db = new DB('goodstype');
+        $res = $db -> where("gid=$gid") -> select('*')[0];
+        $db = new DB("shop");
+        $sres = $db -> select("*");
+        $this -> smarty -> assign('sres',$sres);
         $this -> smarty -> assign('res',$res);
-        $this -> smarty -> assign('arr',$arr);
         $this -> smarty -> assign('info',$this -> info);
-        $this -> smarty -> display("editshop.html");
+        $this -> smarty -> display("editgtype.html");
     }
-    // 执行修改店铺内容指令
+    // 提交编辑后的商品分类给数据库
     function update() {
-        $data = $_GET;
-        $sid = $_GET['sid'];
-        unset($data['sid']);
-        $db = new DB('shop');
-        $rows = $db -> where("sid=$sid") -> update($data);
+        $data = $_POST;
+        $gid = $_POST['gid'];
+        unset($data['gid']);
+        $db = new DB('goodstype');
+        $rows = $db -> where("gid=$gid") -> update($data);
         if ($rows == 1) {
-            echo json_encode(['code' => 0,'msg' => '店铺修改成功']);
+            echo json_encode(['code' => 0,'msg' => '栏目修改成功']);
         }
         else {
-            echo json_encode(['code' => 1,'msg' => '店铺修改失败']);
+            echo json_encode(['code' => 1,'msg' => '栏目修改失败']);
         }
     }
-
 }

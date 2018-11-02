@@ -1,33 +1,14 @@
-// 解构赋值
 let {table,$,jquery,layer} = layui;
-// 渲染数据表格
 table.render({
     elem: '#test',
     cols: [[
         {type: 'checkbox', fixed: 'left'},
-        {field: 'sid', width: 120, title: 'SID', sort: true},
-         {field: 'shopname', width: 100, title: '店铺名称', sort: true},
-        {field: 'thumb', width: 120, title: '缩略图', templet:'<div><img src="{{ d.sthumb}}" width="50" height="50"></div>'},
-        {field: 'sale', width: 100, title: '销量', sort: true},
-        {field: 'score', width: 100, title: '评分', sort: true},
-        {field: 'notice', width: 120, title: '公告'},
-        {field: 'fee', width: 120, title: '配送费', sort: true},
-        {field: 'views', width: 200, title: '实景图片', templet:function (d) {
-                let arr = d.views.split(",");
-                let str = "<div>";
-                arr.forEach(val => {
-                    str += `<img src="${val}" alt="${val}" width="50" height="50" style="margin: 0 10px">`
-                })
-                str += "</div>";
-                return str;
-            }},
-        {field: 'slogan', width: 120, title: '口号'},
-        {field: 'stype', width: 120, title: '经营范围'},
-        {field: 'sphone', width: 120, title: '店铺电话'},
-        {field: 'cid', width: 120, title: '所属分类', sort: true},
-        {fixed: 'right', width:200, align:'center', toolbar: '#toolbar', title: '操作'}
+        {field: 'gid', width: 180, title: 'GID', sort: true},
+        {field: 'title', width: 220, title: '栏目标题', edit: 'text', sort: true},
+        {field: 'sid', width: 220, title: 'SID', sort: true},
+        {fixed: 'right', width:240, align:'center', toolbar: '#toolbar',title: "操作"}
     ]],
-    url: '/speedbuy/index.php/manageshop/query',
+    url: '/speedbuy/index.php/managegtype/query',
     page: { //支持传入 laypage 组件的所有参数（某些参数除外，如：jump/elem） - 详见文档
         prev: '上一页',
         next: '下一页',
@@ -73,14 +54,14 @@ table.on('toolbar(test)', function(obj){
             break;
         case 'allDelete':
             let data3 = checkStatus.data;
-            let arr = data3.map(ele => ele.sid);
+            let arr = data3.map(ele => ele.gid);
             $.ajax({
-                url: "/speedbuy/index.php/manageshop/deletes",
-                data: {sid:arr.join()},
+                url: "/speedbuy/index.php/managegtype/deletes",
+                data: {gid:arr.join()},
                 dataType: "json",
                 success: function (res) {
                     if (res.code == 0) {
-                        location.href = "/speedbuy/index.php/manageshop";
+                        location.href = "/speedbuy/index.php/managegtype";
                     }
                     else {
                         layer.open({
@@ -99,13 +80,13 @@ table.on('toolbar(test)', function(obj){
     };
 });
 //监听行工具事件
-table.on('tool(test)', function(obj){
+table.on('tool(test)', function(obj) {
     let data = obj.data;
-    if(obj.event === 'del'){
-        layer.confirm('真的删除行么', function(index){
+    if (obj.event === 'del') {
+        layer.confirm('真的删除行么', function (index) {
             $.ajax({
-                url: "/speedbuy/index.php/manageshop/delete",
-                data: {sid: data.sid},
+                url: "/speedbuy/index.php/managegtype/delete",
+                data: {gid: data.gid},
                 dataType: 'json',
                 success: function (res) {
                 }
@@ -113,30 +94,61 @@ table.on('tool(test)', function(obj){
             obj.del();
             layer.close(index);
         });
-    } else if(obj.event === 'edit') {
-        location.href = "/speedbuy/index.php/manageshop/edit?sid=" + data.sid;
+    } else if (obj.event === 'edit') {
+        $.ajax({
+            url: "/speedbuy/index.php/managegtype/update",
+            data: {
+                gid:data.gid,
+                title:data.title,
+                sid:data.sid,
+            },
+            type: "post",
+            dataType: 'json',
+            success: function (res) {
+                if (res.code == 0) {
+                    layer.open({
+                        type: 1,
+                        title: ['提示', 'font-size:18px;background:#red;color:#fff;'], //显示标题栏默认false
+                        area: '300px;',
+                        closeBtn: 2,
+                        time: 3000,
+                        anim: 1,
+                        content: '<div style="padding: 50px; line-height: 22px; background-color: #099668; color: #fff; font-weight: 300;font-size: 20px;">修改成功！</div>',
+                    });
+                }
+                else if (res.code == 1) {
+                    layer.open({
+                        type: 1,
+                        title: ['提示', 'font-size:18px;background:#red;color:#fff;'], //显示标题栏默认false
+                        area: '300px;',
+                        closeBtn: 2,
+                        time: 3000,
+                        anim: 1,
+                        content: '<div style="padding: 50px; line-height: 22px; background-color: red; color: #fff; font-weight: 300;font-size: 20px;">修改失败！</div>',
+                    });
+                }
+            }
+        })
     }
-});
-// 声明一个搜索方法，根据输入的条件
+})
 let active = {
     reload: function() {
+        let gid = $('#gid').val();
+        let title = $('#title').val();
         let sid = $('#sid').val();
-        let shopname = $('#shopname').val();
-        let cid = $('#cid').val();
         //执行重载
         table.reload('table1', {
             page: {
                 curr: 1 //重新从第 1 页开始
             },
             where: {
-                sid: sid,
-                shopname: shopname,
-                cid: cid
+                gid: gid,
+                title: title,
+                sid: sid
             }
         });
     }
 };
-// 执行搜索方法
 $('.demoTable .layui-btn').on('click', function(){
     let type = $(this).data('type');
     active[type] ? active[type].call(this) : '';

@@ -3,7 +3,8 @@ let sthumb = $("input:hidden[name=sthumb]");
 let views = $("input:hidden[name=views]");
 let imgbox = $(".imgBox");
 let imgbox2 = $(".imgBox2");
-let arr = []; // 空数组用来存储图片路径，方便修改
+// 空数组用来存储图片路径，方便修改
+let arr = [];
 // 缩略图上传图片（只一张）
 upload.render({
     elem: '#test1',
