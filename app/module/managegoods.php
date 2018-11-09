@@ -15,9 +15,6 @@ class managegoods extends main{
     function insert() {
         $db = new DB('shop');
         $shopname = $db -> select("shopname,sid");
-        $db = new DB('goodstype');
-        $goodstype = $db -> where("sid=1") -> select("title,gid");
-        $this -> smarty -> assign('goodstype',$goodstype);
         $this -> smarty -> assign('shopname',$shopname);
         $this -> smarty -> assign('info',$this -> info);
         $this -> smarty -> display('insertgoods.html');
@@ -32,7 +29,7 @@ class managegoods extends main{
     // 执行添加商品指令
     function insert1() {
         $data = $_POST;
-        $db = new DB('shop');
+        $db = new DB('goods');
         $rows = $db -> insert($data);
         if ($rows == 1) {
             echo json_encode(['code' => 0,'msg' => '栏目插入成功']);
@@ -92,27 +89,26 @@ class managegoods extends main{
     }
     // 展示修改商品内容页面
     function edit() {
-        $sid = $_GET['sid'];
         $db = new DB('shop');
-//        $sql = "select shop.*,category.title from shop,category where shop.cid=category.cid";
-        $res = $db -> where("sid=$sid") -> select('*')[0];
-        $vstr = $res['views'];
-        $arr = explode(',',$vstr);
-        $db = new DB('category');
-        $str = $db -> where("pid!=0") -> select("*");
-        $this -> smarty -> assign('str',$str);
+        $shopname = $db -> select("shopname,sid");
+        $db = new DB('goodstype');
+        $goodstype = $db -> select("title,gid");
+        $id = $_GET['id'];
+        $db = new DB('goods');
+        $res = $db -> where("id=$id") -> select('*')[0];
         $this -> smarty -> assign('res',$res);
-        $this -> smarty -> assign('arr',$arr);
         $this -> smarty -> assign('info',$this -> info);
-        $this -> smarty -> display("editshop.html");
+        $this -> smarty -> assign('shopname',$shopname);
+        $this -> smarty -> assign('goodstype',$goodstype);
+        $this -> smarty -> display("editgoods.html");
     }
     // 执行修改商品内容指令
     function update() {
         $data = $_GET;
-        $sid = $_GET['sid'];
-        unset($data['sid']);
-        $db = new DB('shop');
-        $rows = $db -> where("sid=$sid") -> update($data);
+        $id = $_GET['id'];
+        unset($data['id']);
+        $db = new DB('goods');
+        $rows = $db -> where("id=$id") -> update($data);
         if ($rows == 1) {
             echo json_encode(['code' => 0,'msg' => '店铺修改成功']);
         }

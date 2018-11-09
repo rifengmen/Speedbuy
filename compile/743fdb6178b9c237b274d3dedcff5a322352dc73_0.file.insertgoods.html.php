@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-02 13:58:38
+/* Smarty version 3.1.33, created on 2018-11-05 02:00:57
   from 'D:\wamp64\www\speedbuy\app\view\insertgoods.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bdc580eaac572_95784914',
+  'unifunc' => 'content_5bdfa459c20d53_65084960',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '743fdb6178b9c237b274d3dedcff5a322352dc73' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\insertgoods.html',
-      1 => 1541167117,
+      1 => 1541383256,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bdc580eaac572_95784914 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bdfa459c20d53_65084960 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -30,12 +30,13 @@ $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_s
 <link rel="stylesheet" href="<?php echo CSS_PATH;?>
 insertshop.css">
 <div class="layui-body" style="padding: 50px">
-    <form class="layui-form" action="">
+    <form class="layui-form" action="" lay-filter="test">
         <!--所属店铺-->
         <div class="layui-form-item">
             <label class="layui-form-label">所属店铺</label>
             <div class="layui-input-block">
                 <select name="sid" lay-verify="required" lay-filter="filter">
+                    <option></option>
                     <?php
 $_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['shopname']->value, 'v');
 if ($_from !== null) {
@@ -54,20 +55,9 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
         <!--所属分类-->
         <div class="layui-form-item">
             <label class="layui-form-label">所属分类</label>
-            <div class="layui-input-block gidbox">
+            <div class="layui-input-block">
                 <select name="gid" lay-verify="required">
-                    <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['goodstype']->value, 'v');
-if ($_from !== null) {
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
-?>
-                    <option value="<?php echo $_smarty_tpl->tpl_vars['v']->value['gid'];?>
-"><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
-</option>
-                    <?php
-}
-}
-$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
+
                 </select>
             </div>
         </div>

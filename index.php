@@ -9,6 +9,7 @@ define('CSS_PATH','/speedbuy/static/css/');
 define('JS_PATH','/speedbuy/static/js/');
 define('LAYUIJS_PATH','/speedbuy/static/');
 define('IMG_PATH','/speedbuy/static/images/');
+define('FONT_PATH',__DIR__.'/libs/DENG.TTF');
 // 必须引用一次Router模块验证跳转路径
 require_once "libs/Router.php";
 // 必须引用一次模板引擎
@@ -19,5 +20,7 @@ require_once "libs/main.php";
 require_once "libs/db.php";
 // 必须引用一次设定栏目标题的方法
 require_once "libs/function.php";
+// 引入验证码
+require_once "libs/code.php";
 // 默认使用Router的init方法
 Router::init();

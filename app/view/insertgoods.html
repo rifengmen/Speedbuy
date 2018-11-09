@@ -2,12 +2,13 @@
 {include file='slide.html'};
 <link rel="stylesheet" href="{CSS_PATH}insertshop.css">
 <div class="layui-body" style="padding: 50px">
-    <form class="layui-form" action="">
+    <form class="layui-form" action="" lay-filter="test">
         <!--所属店铺-->
         <div class="layui-form-item">
             <label class="layui-form-label">所属店铺</label>
             <div class="layui-input-block">
                 <select name="sid" lay-verify="required" lay-filter="filter">
+                    <option></option>
                     {foreach $shopname as $v}
                     <option value="{$v['sid']}">{$v['shopname']}</option>
                     {/foreach}
@@ -17,11 +18,9 @@
         <!--所属分类-->
         <div class="layui-form-item">
             <label class="layui-form-label">所属分类</label>
-            <div class="layui-input-block gidbox">
+            <div class="layui-input-block">
                 <select name="gid" lay-verify="required">
-                    {foreach $goodstype as $v}
-                    <option value="{$v['gid']}">{$v['title']}</option>
-                    {/foreach}
+
                 </select>
             </div>
         </div>

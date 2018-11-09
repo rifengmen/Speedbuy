@@ -1,0 +1,104 @@
+{include file='header.html'};
+{include file='slide.html'};
+<link rel="stylesheet" href="{CSS_PATH}insertshop.css">
+<div class="layui-body" style="padding: 50px">
+    <form class="layui-form" action="" lay-filter="test">
+        <!--所属店铺-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属店铺</label>
+            <div class="layui-input-block">
+                <select name="sid" lay-verify="required" lay-filter="filter">
+                    {foreach $shopname as $v}
+                    {if $res.sid == $v['sid']}
+                    <option value="{$v['sid']}" selected>{$v['shopname']}</option>
+                    {else}
+                    <option value="{$v['sid']}">{$v['shopname']}</option>
+                    {/if}
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+        <!--所属分类-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属分类</label>
+            <div class="layui-input-block">
+                <select name="gid" lay-verify="required">
+                    {foreach $goodstype as $v}
+                    {if $res.gid == $v['gid']}
+                    <option value="{$v['gid']}" selected>{$v['title']}</option>
+                    {else}
+                    <option value="{$v['gid']}">{$v['title']}</option>
+                    {/if}
+                    {/foreach}
+                </select>
+            </div>
+        </div>
+        <!--商品名称-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">商品名称</label>
+            <div class="layui-input-block">
+                <input type="text" name="title" required  lay-verify="required" placeholder="请输入商品名称" autocomplete="off" class="layui-input" value="{$res.title}">
+            </div>
+        </div>
+        <!--介绍-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">商品介绍</label>
+            <div class="layui-input-block">
+                <input type="text" name="des" required  lay-verify="required" placeholder="请输入商品介绍" autocomplete="off" class="layui-input" value="{$res.des}">
+            </div>
+        </div>
+        <!--原价-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">原价</label>
+            <div class="layui-input-block">
+                <input type="text" name="price" required  lay-verify="required" placeholder="请输入原价" autocomplete="off" class="layui-input" value="{$res.price}">
+            </div>
+        </div>
+        <!--折扣价-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">折扣价</label>
+            <div class="layui-input-block">
+                <input type="text" name="discount" required  lay-verify="required" placeholder="请输入折扣价" autocomplete="off" class="layui-input" value="{$res.discount}">
+            </div>
+        </div>
+        <!--缩略图-->
+        <div class="layui-form-item">
+            <label class="layui-form-label">缩略图上传</label>
+            <button type="button" class="layui-btn" id="test1">
+                <i class="layui-icon">&#xe67c;</i>上传图片
+            </button>
+        </div>
+        <!--隐藏的input，用来携带上传缩略图的路径-->
+        <input type="hidden" name="thumb" value="{$res.thumb}">
+        <!--隐藏的input，用来携带对应的id-->
+        <input type="hidden" name="id" value="{$res.id}">
+        <!--预览缩略图-->
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <ul class="imgBox">
+                <li>
+                    <img src="{$res.thumb}" width="100">
+                    <div class="mask"></div>
+                    <div class="button">
+                        <i class="layui-icon layui-icon-search"></i>
+                        <i class="layui-icon layui-icon-delete"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="submit">立即提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="layui-footer">
+    <!-- 底部固定区域 -->
+    版权属于我
+</div>
+</div>
+<script src="{LAYUIJS_PATH}layui.all.js"></script>
+<script src="{JS_PATH}editgoods.js"></script>
+</body>
+</html>

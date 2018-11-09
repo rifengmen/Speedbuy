@@ -1,7 +1,7 @@
 let {form,$,jquery,upload,layer} = layui;
 let thumb = $("input:hidden[name=thumb]");
 let imgbox = $(".imgBox");
-let gidBox = $(".gidbox");
+let gidBox = $("select[name=gid]");
 // 缩略图上传图片（只一张）
 upload.render({
     elem: '#test1',
@@ -41,26 +41,25 @@ imgbox.on("click",".layui-icon-search",function () {
 });
 // 监听select选中事件
 form.on('select(filter)', function(data){
-    gidBox.html("");
     $.ajax({
         url: "/speedbuy/index.php/managegoods/insert2",
         data: {sid:data.value},
         dataType: "json",
         success: function (res) {
-            let str = `<select name="gid" lay-verify="required">`;
+            let str = ``;
             $(res).each(function (i, v) {
                 str += `<option value="${v.gid}">${v.title}</option>`;
             })
-            str += `</select>`;
-            console.log(str);
             gidBox.html(str);
+            // 刷新select选择框渲染
+            form.render('select',"test");
         }
     })
 });
 // 获取表单填写数据并发送
 form.on("submit(submit)",function (data) {
     delete data.field.file;
-    if (!data.field.sthumb || !data.field.views) {
+    if (!data.field.thumb) {
         layer.open({
             type: 1,
             title: ['提示', 'font-size:18px;background:red;color:#fff;'], //显示标题栏默认false

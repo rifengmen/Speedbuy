@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}cate.css"/>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}iconfont.css"/>
+</head>
+<body>
+	<!--头部-->
+	<header>
+		<a href="/speedbuy/index.php/index" class="position">
+			<i class="iconfont icon-xiangzuo"></i>
+			<span>返回</span>
+		</a>
+		<span>{$cres[0].title}</span>
+		<a href="#" class="sousuo">
+			<i class="iconfont icon-sousuo"></i>
+		</a>
+	</header>
+	<!--nav部分-->
+	<div class="nav">
+		    <ul>
+		    	<li class="hot" cid="0">全部</li>
+				{foreach $sres as $v}
+		    	<li cid="{$v.cid}">{$v.title}</li>
+		    	{/foreach}
+		    </ul>
+	</div>
+	<!--推荐商家分类选项-->
+	<ul class="recommend-fl">
+		<li class="hot" type="sid">综合排序</li>
+		<li type="score">好评优先</li>
+		<li type="sale">销量优先</li>
+		<li type="fee">派送费</li>
+	</ul>
+	<!--推荐商家列表-->
+	<div class="recommend-shop" id="wrapper">
+		<div>
+			<div class="scrollup">
+				<span>不要拖了，上面没有的！</span>
+			</div>
+			<ul class="recommend-shop-ul">
+
+			</ul>
+			<div class="scrolldown">
+				<i class="iconfont icon-jiazai"></i>
+				<span>加载中...</span>
+			</div>
+		</div>
+	</div>
+	<div class="loadBox">
+		<div class="loadimg"></div>
+	</div>
+</body>
+<script src="{JS_PATH}rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}cate.js" type="text/javascript" charset="utf-8"></script>
+</html>

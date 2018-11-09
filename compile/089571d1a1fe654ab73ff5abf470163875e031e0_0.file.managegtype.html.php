@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-02 12:40:00
+/* Smarty version 3.1.33, created on 2018-11-05 02:19:12
   from 'D:\wamp64\www\speedbuy\app\view\managegtype.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bdc45a021e856_57446209',
+  'unifunc' => 'content_5bdfa8a0c7d1a3_32066549',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '089571d1a1fe654ab73ff5abf470163875e031e0' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\managegtype.html',
-      1 => 1541162398,
+      1 => 1541384350,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:slide.html' => 1,
   ),
 ),false)) {
-function content_5bdc45a021e856_57446209 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bdfa8a0c7d1a3_32066549 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>;
 <?php $_smarty_tpl->_subTemplateRender('file:slide.html', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -45,10 +45,6 @@ $_smarty_tpl->_subTemplateRender('file:header.html', $_smarty_tpl->cache_id, $_s
 </style>
 <div class="layui-body" style="padding: 50px">
     <div class="demoTable">
-        搜索GID：
-        <div class="layui-inline">
-            <input class="layui-input" name="gid" id="gid" autocomplete="off">
-        </div>
         搜索分类名称：
         <div class="layui-inline">
             <input class="layui-input" name="title" id="title" autocomplete="off">

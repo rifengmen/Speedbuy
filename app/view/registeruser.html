@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}registeruser.css"/>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}iconfont.css"/>
+</head>
+<body>
+	<!--LOGO-->
+	<header>
+		<img src="{IMG_PATH}logo.png" alt="">
+	</header>
+	<!--注册视窗-->
+	<form class="windows" id="myform">
+		<div class="name">
+			<span></span>
+			<input type="text" name="phone" id="phone" placeholder="请输入您的手机号"/>
+		</div>
+		<!--<div>-->
+			<!--<div>-->
+				<!--<span></span>-->
+			    <!--<input type="text" name="" id="verification" placeholder="请输入验证码"/>-->
+			<!--</div>-->
+			<!--<button type="submit">发送验证码</button>-->
+		<!--</div>-->
+		<div>
+			<span></span>
+			<input type="password" name="password" id="password" placeholder="请输入您设置的密码"/>
+		</div>
+		<div>
+			<span></span>
+			<input type="password" name="password1" id="password1" placeholder="请再次输入您设置的密码"/>
+		</div>
+		<button type="submit" class="reg">注册</button>
+		<div class="other">
+			<a href="#">忘记密码？</a>
+			<a href="/speedbuy/index.php/my">已有账号？请登录</a>
+		</div>
+	</form>
+	<!--第三方登录-->
+	<div class="thirdparty">
+		<p>请使用第三方登录</p>
+		<p class="third">
+			<a href="#"><i class="iconfont icon-qq"></i></a>
+			<a href="#"><i class="iconfont icon-weixin"></i></a>
+			<a href="#"><i class="iconfont icon-xinlang"></i></a>
+		</p>
+	</div>
+</body>
+<script src="{JS_PATH}rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery.validate.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}registeruser.js" type="text/javascript" charset="utf-8"></script>
+</html>

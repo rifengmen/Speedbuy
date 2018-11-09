@@ -7,7 +7,7 @@ table.render({
         {type: 'checkbox', fixed: 'left'},
         {field: 'id', width: 120, title: 'ID', sort: true},
          {field: 'title', width: 100, title: '商品名称', sort: true},
-        {field: 'thumb', width: 120, title: '缩略图', templet:'<div><img src="{{ d.sthumb}}" width="50" height="50"></div>'},
+        {field: 'thumb', width: 120, title: '缩略图', templet:'<div><img src="{{ d.thumb}}" width="50" height="50"></div>'},
         {field: 'count', width: 100, title: '销量', sort: true},
         {field: 'score', width: 100, title: '评分', sort: true},
         {field: 'des', width: 120, title: '介绍'},

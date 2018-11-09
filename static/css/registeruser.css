@@ -1,0 +1,164 @@
+@import url("base.css");
+
+/*LOGO*/
+header {
+	margin: 1.22rem auto;
+	width: 100%;
+	padding: 0 2rem;
+}
+header > img {
+	width: 100%;
+	height: 100%;
+}
+/*注册视窗*/
+ .windows {
+ 	width: 6.54rem;
+ 	height: 7.38rem;
+ 	font-size: 0.22rem;
+ 	background-color: rgba(62,227,251,0.2);
+ 	padding: 1.26rem 0.48rem;
+ 	margin: 0 auto;
+ 	border-radius: 0.1rem;
+ 	display: flex;
+ 	flex-direction: column;
+ 	justify-content: space-between;
+ }
+.windows>div {
+	width: 5.58rem;
+	height: 0.6rem;
+	outline: none;
+	background-color: #3EE3FB;
+	border-radius: 0.3rem;
+	display: flex;
+	line-height: 0.6rem;
+}
+.windows>div>span {
+	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	border-radius: 50%;
+	margin: 0.2rem;
+	background-color: #fcf64a;
+}
+.windows>div>input {
+	width: 100%;
+	border-radius: 0.3rem;
+	border: 0;
+	background-color: #3EE3FB;
+	outline: none;
+}
+/*.windows>div:nth-child(2) {*/
+	/*background-color: rgba(62,227,251,0);*/
+	/*display: flex;*/
+	/*justify-content: space-between;*/
+/*}*/
+.windows>div>div {
+	width: 3.1rem;
+	height: 100%;
+	border-radius: 0.3rem;
+	background-color: #3EE3FB;
+	display: flex;
+}
+.windows>div>div>span {
+	display: inline-block;
+	width: 0.2rem;
+	height: 0.2rem;
+	border-radius: 50%;
+	margin: 0.2rem;
+	background-color: #fcf64a;
+}
+.windows>div>div>input {
+	width: 2.2rem;
+	border: 0;
+	background-color: #3EE3FB;
+	outline: none;
+}
+.windows>div>button {
+	width: 2.12rem;
+	height: 100%;
+	font-size: 0.24rem;
+	color: #FFFFFF;
+	background-color: #3EE3FB;
+	outline: none;
+	border: 0;
+	border-radius: 0.3rem;
+}
+.windows > button {
+	width: 5.58rem;
+	height: 0.6rem;
+	line-height: 0.6rem;
+	font-size: 0.28rem;
+	color: #FFFFFF;
+	outline: none;
+	background-color: rgb(62,227,251);
+	border: 0;
+	border-radius: 0.3rem;
+}
+.windows>.other {
+	background-color: rgba(0,0,0,0);
+	display: flex;
+	justify-content: space-between;
+}
+.windows>.other>a {
+	font-size: 0.22rem;
+	color: rgba(0,0,0,0.3);
+}
+::-webkit-input-placeholder {
+	font-size: 0.22rem;
+	font-weight: 300;
+	color: #9F9F9F;
+}
+
+/*警示框部分*/
+#phone-error,
+#password-error,
+#password1-error {
+	position: fixed;
+	padding-left: 0.5rem;
+	width: 2.34rem;
+	height: 0.4rem;
+	font-size: 0.2rem;
+	color: #FFFFFF;
+	line-height: 0.4rem;
+	background-color: #fd383c;
+	border-radius: 0.3rem 0.1rem;
+}
+#phone-error {
+	top: 4.62rem;
+	left: 4.2rem;
+}
+#password-error {
+	top: 5.68rem;
+	left: 4.2rem;
+}
+#password1-error {
+	top: 6.74rem;
+	left: 4.2rem;
+}
+/*第三方登录*/
+div.thirdparty {
+	width: 100%;
+	height: 0.9rem;
+	font-size: 0.22rem;
+	color: rgba(0,0,0,0.3);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.6rem;
+}
+div.thirdparty>.third {
+	width: 2.37rem;
+	height: 0.39rem;
+	display: flex;
+	justify-content: space-between;
+}
+div.thirdparty>.third>a>.icon-qq {
+	color: #68A5E1;
+}
+div.thirdparty>.third>a>.icon-weixin {
+	color: #41fb68;
+}
+div.thirdparty>.third>a>.icon-xinlang {
+	color: #fb414e;
+}

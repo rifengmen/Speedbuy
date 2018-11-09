@@ -4,7 +4,7 @@ table.render({
     cols: [[
         {type: 'checkbox', fixed: 'left'},
         {field: 'gid', width: 180, title: 'GID', sort: true},
-        {field: 'title', width: 220, title: '栏目标题', edit: 'text', sort: true},
+        {field: 'title', width: 220, title: '分类名称', edit: 'text', sort: true},
         {field: 'shopname', width: 220, title: '所属店铺', sort: true},
         {fixed: 'right', width:240, align:'center', toolbar: '#toolbar',title: "操作"}
     ]],
@@ -144,7 +144,6 @@ table.on('tool(test)', function(obj) {
 })
 let active = {
     reload: function() {
-        let gid = $('#gid').val();
         let title = $('#title').val();
         let sid = $('#sid').val();
         //执行重载
@@ -153,7 +152,6 @@ let active = {
                 curr: 1 //重新从第 1 页开始
             },
             where: {
-                gid: gid,
                 title: title,
                 sid: sid
             }
