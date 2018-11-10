@@ -110,10 +110,10 @@ class managegoods extends main{
         $db = new DB('goods');
         $rows = $db -> where("id=$id") -> update($data);
         if ($rows == 1) {
-            echo json_encode(['code' => 0,'msg' => '店铺修改成功']);
+            echo json_encode(['code' => 0,'msg' => '商品修改成功']);
         }
         else {
-            echo json_encode(['code' => 1,'msg' => '店铺修改失败']);
+            echo json_encode(['code' => 1,'msg' => '商品修改失败']);
         }
     }
 
