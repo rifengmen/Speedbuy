@@ -14,6 +14,10 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
+header > a {
+	width: 1rem;
+	text-align: right;
+}
 header .position,header>.position>i {
 	font-size: 0.3rem;
 	color: #ffffff;
@@ -40,9 +44,9 @@ header>.sousuo>i {
 	overflow: hidden;
 }
 .zhanwei > img {
-	width: 130%;
-	height: 130%;
-
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
 }
 .logo {
 	width: 1.8rem;
@@ -85,6 +89,12 @@ header>.sousuo>i {
 	padding: 0 0.1rem;
 	color: #FFFFFF;
 }
+.notice {
+	padding: 0.24rem;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
 /*商家分类选项*/
 .recommend-fl {
 	width: 70%;
@@ -109,7 +119,7 @@ header>.sousuo>i {
 /*商品窗口*/
 .shop-view {
     width: 100%;
-    height: 6.1rem;
+    height: 5.6rem;
     position: relative;
 }
 /*商品列表*/
@@ -138,7 +148,7 @@ header>.sousuo>i {
 	width: 100%;
 }
 .list>li {
-	font-size: 0.24rem;
+	font-size: 0.22rem;
 	color: #000000;
 	background-color: #3ee3fd;
 	opacity: 0.5;
@@ -146,6 +156,10 @@ header>.sousuo>i {
 	height: 0.8rem;
 	line-height: 0.8rem;
 	text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 0 0.1rem;
 }
 .list>.hot {
 	color: #FFFFFF;
@@ -158,10 +172,9 @@ header>.sousuo>i {
 }
 .recommend-shop-ul > li > h2 {
 	width: 100%;
-	height: 0.3rem;
-	line-height: 0.3rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
 	font-size: 0.2rem;
-	margin: 0.1rem auto;
 	border-bottom: 0.02rem #3ee3fb solid;
 	opacity: 0.8;
 }
@@ -170,8 +183,8 @@ header>.sousuo>i {
 }
 .recommend-shop-ul > li > ul >li {
 	width: 100%;
-	height: 1.4rem;
-	margin-bottom: 0.24rem;
+	height: 1.64rem;
+	padding-top: 0.1rem;
 	background-color: #FFFFFF;
 	font-size: 0.22rem;
 }
@@ -203,13 +216,19 @@ header>.sousuo>i {
 	justify-content: space-between;
 }
 .right-text>h3 {
+	width: 3rem;
 	opacity: 0.9;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+    font-size: 0.24rem;
 }
 .right-text>.iconxx i {
 	color: #FFD000;
 }
 .right-text>.iconxx>span {
 	opacity: 0.7;
+    font-size: 0.18rem;
 }
 .v {
 	margin-left: 0.24rem;
@@ -221,15 +240,25 @@ header>.sousuo>i {
  .delivery-left {
  	display: inline-block;
 	opacity: 0.7;
-	font-size: 0.28rem;
+	font-size: 0.24rem;
 	color: red;
 }
-.delivery > span >span {
+.delivery-left > del {
+	margin-left: 0.1rem;
+	opacity: 0.7;
+	font-size: 0.18rem;
+	color: #000;
+}
+.delivery > span > span {
 	line-height: 0.4rem;
 	font-size: 0.2rem;
 	opacity: 0.8;
+	display: none;
 }
-/*商家信息*/
+.delivery > span > .icon-jian-copy {
+	display: none;
+}
+	/*商家信息*/
 .shop-msg {
     position: absolute;
     top: 0;
@@ -297,8 +326,12 @@ header>.sousuo>i {
 /*购物车商品信息*/
 .shopping {
 	position: fixed;
-	bottom: 0.98rem;
+    left: 0;
+    top: calc(100% - 0.98rem - 0.36rem);
 	width: 100%;
+    background-color: #fff;
+    transform: translate3d(0,0,0);
+    transition: .5s ease;
 }
 /*优惠提示*/
 .shopping > .discount {
@@ -316,22 +349,25 @@ header>.sousuo>i {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	/*height: 0.5rem;*/
+	height: 0.5rem;
 	line-height: 0.5rem;
 	background-color: #ccc;
 	color: #333;
-    height: 0;
 }
 .shopping > div > i {
 	font-size: 0.22rem;
 }
-.shopping > ul {
-	height: 0;
+.shopping > div.iscroll {
+    max-height: 2.4rem;
+    overflow: hidden;
+}
+.shopping > div > ul {
 	width: 100%;
+    height: auto;
 	padding: 0 0.24rem;
 	background-color: #fff;
 }
-.shopping > ul > li {
+.shopping > div > ul > li {
 	width: 100%;
 	height: 0.8rem;
 	line-height: 0.8rem;
@@ -341,24 +377,37 @@ header>.sousuo>i {
 	font-size: 0.26rem;
 	color: #111;
 }
-.shopping > ul > li > .right {
-	width: 2.5rem;
+.shopping > div > ul > li > .left {
+    width: 3rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.shopping > div > ul > li > .right {
+	width: 3.5rem;
 	display: flex;
 	justify-content: space-between;
 }
-.shopping > ul > li > .right > .money {
+.shopping > div > ul > li > .right > .money {
+    width: 1.5rem;
 	color: red;
+    text-align: right;
 }
-.shopping > ul > li > .right i {
+.shopping > div > ul > li > .right i {
 	color: #3ee3fb;
+}
+.shopping > div > ul > li > .right span {
+    display: inline-block;
+    width: 0.5rem;
+    text-align: center;
 }
 /*结算栏*/
 /*购物车*/
 .pay > .cart {
-	width: 0.8rem;
-	height: 0.8rem;
+	width: 0.9rem;
+	height: 0.9rem;
 	border-radius: 50%;
-	border: 0.06rem solid #444;
+	border: 0.08rem solid #444;
 	background-color: #808080;
 	position: fixed;
 	left: 0.24rem;
@@ -372,7 +421,7 @@ header>.sousuo>i {
 	background-color: #fff;
 }
 .pay > .cart > i {
-	font-size: 0.5rem;
+	font-size: 0.44rem;
 	color: rgba(0,0,0,0.8);
 }
 .pay.hot > .cart > i {
@@ -381,17 +430,17 @@ header>.sousuo>i {
 .pay > .cart > span {
 	display: none;
 }
-.pay.hot > .cart > span {
+.pay > .cart.hot > span {
 	position: absolute;
-	top: -0.06rem;
-	right: -0.04rem;
+	top: -0.08rem;
+	right: -0.06rem;
 	background: linear-gradient(-90deg,#ff7416,#ff3c15 98%);;
 	display: inline-block;
-	width: 0.26rem;
-	height: 0.26rem;
+	width: 0.3rem;
+	height: 0.3rem;
 	border-radius: 50%;
 	font-size: 0.18rem;
-	line-height: 0.26rem;
+	line-height: 0.3rem;
 	text-align: center;
 	color: #fff;
 }
@@ -423,7 +472,16 @@ header>.sousuo>i {
 .pay.hot>.left {
 	color: #3ee3fb;
 }
+.pay.hot>.left>p>.discount {
+    color: red;
+    font-size: 0.3rem;
+}
+.pay.hot>.left>p>.price {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.2rem;
+}
 .pay>.left>span:nth-child(2) {
+    color: rgba(255,255,255,0.4);
 	font-size: 0.22rem;
 }
 .pay>.right {
@@ -431,10 +489,7 @@ header>.sousuo>i {
 	background-color: rgba(0,0,0,0.4);
 	color: rgba(0,0,0,0.4);
 }
-.pay.hot>.right {
+.pay>.right.hot {
 	background-color: #38ca73;
 	color: #fff;
-}
-.pay>.right>span:nth-child(1) {
-	font-size: 0.22rem;
 }

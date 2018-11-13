@@ -12,4 +12,12 @@ class main{
         // 初始化，编译文件目录
         $this -> smarty -> setCompileDir('compile');
     }
+    function islogin()
+    {
+        session_start();
+        if (isset($_SESSION["islogin"]) && $_SESSION["islogin"] == "yes") {
+            return true;
+        }
+        return false;
+    }
 }

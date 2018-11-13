@@ -82,7 +82,7 @@ class my extends main
             $res = $db -> where("phone=$phone") -> select("*");
             if ($res && $res[0]['password'] == $password) {
                 $_SESSION['islogin'] = "yes";
-                $_SESSION['phone'] = $res[0]['id'];
+                $_SESSION['userid'] = $res[0]['id'];
                 echo json_encode(["code" => 0, "msg" => "登录成功"]);
             }
             else if ($res && $res[0]['password'] != $password) {

@@ -53,7 +53,13 @@ $(function () {
                 dataType: "json",
                 success: function (res) {
                     if (res.code == 0) {
-                        location.href="/speedbuy/index.php/my/querymy";
+                       if (location.search) {
+                           let urls = location.search.substring(location.search.indexOf("=")+1);
+                           location.href="/speedbuy/index.php" + urls;
+                       }
+                       else {
+                           location.href="/speedbuy/index.php/index";
+                       }
                     }
                     else if (res.code == 1) {
                         alert(res.msg);
