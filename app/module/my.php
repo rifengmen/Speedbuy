@@ -50,7 +50,7 @@ class my extends main
             echo json_encode(["code" => 1, "msg" => "账号已存在"]);
         }
     }
-    // 验证码
+    // 显示验证码
     function code()
     {
         $code = new code();
@@ -99,6 +99,20 @@ class my extends main
     // 打开我的页面
     function querymy()
     {
-        $this -> smarty -> display("my.html");
+        if (!$this -> islogin()) {
+            $this -> smarty -> display("login.html");
+        }
+        else {
+            $this -> smarty -> display("my.html");
+        }
+    }
+    // 显示个人信息
+    function query()
+    {
+        session_start();
+        $id = $_SESSION["userid"];
+        $db = new DB("users");
+        $res = $db -> where("id=$id") -> select("*");
+        echo json_encode($res);
     }
 }

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-09 05:34:55
+/* Smarty version 3.1.33, created on 2018-11-15 06:39:33
   from 'D:\wamp64\www\speedbuy\app\view\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5be51c7fe0cad3_39684475',
+  'unifunc' => 'content_5bed14a59e9588_24254064',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9d2e655d9f14a06cbde0c73b5d315c115064c2df' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\index.html',
-      1 => 1541741694,
+      1 => 1542263967,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5be51c7fe0cad3_39684475 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bed14a59e9588_24254064 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -51,24 +51,22 @@ index.css"/>
 	<!--banner图-->
 	<div class="banner swiper-container">
 		<ul class="banner-img swiper-wrapper">
+            <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['shop']->value, 'v');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
+?>
 			<li class="swiper-slide">
-				<a href="#">
-					<img src="<?php echo IMG_PATH;?>
-bi1.jpg" alt="">
+				<a href="/speedbuy/index.php/shop?sid=<?php echo $_smarty_tpl->tpl_vars['v']->value['sid'];?>
+">
+					<img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['sthumb'];?>
+" alt="">
 				</a>
 			</li>
-			<li class="swiper-slide">
-				<a href="#">
-					<img src="<?php echo IMG_PATH;?>
-bi1.jpg" alt="">
-				</a>
-			</li>
-			<li class="swiper-slide">
-				<a href="#">
-					<img src="<?php echo IMG_PATH;?>
-bi1.jpg" alt="">
-				</a>
-			</li>
+            <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 		</ul>
 		<div class="banner-dian swiper-pagination"></div>
 	</div>
@@ -120,251 +118,22 @@ $_smarty_tpl->tpl_vars['j']->first = $_smarty_tpl->tpl_vars['j']->iteration === 
 	</div>
 	<!--推荐商家分类选项-->
 	<ul class="recommend-fl">
-		<li class="hot">
-			<a href="#">综合排序</a>
-		</li>
-		<li>
-			<a href="#">好评优先</a>
-		</li>
-		<li>
-			<a href="#">距离最近</a>
-		</li>
-		<li>
-			<a href="#">
-				筛&nbsp;选&nbsp;
-				<i class="iconfont icon-shaixuan"></i>
-			</a>
-		</li>
+		<li class="hot" type="sid">综合排序</li>
+		<li type="score">好评优先</li>
+		<li type="sale">销量优先</li>
+		<li type="fee">派送费</li>
 	</ul>
 	<!--推荐商家列表-->
-	<div class="recommend-shop">
-		<ul class="recommend-shop-ul">
-			<li>
-				<a href="shop.html">
-					<div class="left-img li01"></div>
-					<div class="right-text">
-						<h3>朴式拌饭</h3>
-						<p class="iconxx">
-							<span>
-								<i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-							</span>
-						    <span>5</span>
-						    <span class="yj">月售968单</span>
-						    <span class="v">蜂鸟专送</span>
-						</p>
-						<p class="delivery">
-							<div class="delivery-left">
-								<span>起送&yen;30</span>
-							    <span>派送费&yen;4</span>
-							</div>
-							<div class="delivery-right">
-								<span>2.3km</span>
-							    <span>28分钟</span>
-							</div>
-						</p>
-						<p class="label">
-							<span class="black">日韩料理</span>
-							<span class="black">品质联盟</span>
-							<span class="red">
-								<i class="iconfont icon-koubei"></i>
-								<span>口碑人气好店</span>
-							</span>
-						</p>
-						<div class="youhui">
-							<div>
-								<span class="new">首</span>
-								<span>新用户下单立减14元</span>
-							</div>
-							<div>
-								<span class="subtract">减</span>
-								<span>满35减15，满55减20</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="shop.html">
-					<div class="left-img li02"></div>
-					<div class="right-text">
-						<h3>老成都川菜馆</h3>
-						<p class="iconxx">
-							<span>
-								<i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing" style="color: rgba(0,0,0,0.5);"></i>
-							</span>
-						    <span>4</span>
-						    <span class="yj">月售556单</span>
-						    <span class="v">蜂鸟专送</span>
-						</p>
-						<p class="delivery">
-							<div class="delivery-left">
-								<span>起送&yen;20</span>
-							    <span>派送费&yen;4</span>
-							</div>
-							<div class="delivery-right">
-								<span>2km</span>
-							    <span>25分钟</span>
-							</div>
-						</p>
-						<p class="label">
-							<span class="black">川湘菜</span>
-							<span class="black">品质联盟</span>
-							<span class="red">
-								<i class="iconfont icon-koubei"></i>
-								<span>口碑人气好店</span>
-							</span>
-						</p>
-						<div class="youhui">
-							<div>
-								<span class="new">首</span>
-								<span>新用户下单立减14元</span>
-							</div>
-							<div>
-								<span class="subtract">减</span>
-								<span>满10减2，满30减5，满99减15</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="shop.html">
-					<div class="left-img li03"></div>
-					<div class="right-text">
-						<h3>馋幺鸡秘汁炒鸡</h3>
-						<p class="iconxx">
-							<span>
-								<i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-							</span>
-						    <span>5</span>
-						    <span class="yj">月售89单</span>
-						    <span class="v">蜂鸟专送</span>
-						</p>
-						<p class="delivery">
-							<div class="delivery-left">
-								<span>起送&yen;20</span>
-							    <span>派送费&yen;5</span>
-							</div>
-							<div class="delivery-right">
-								<span>2.66km</span>
-							    <span>28分钟</span>
-							</div>
-						</p>
-						<p class="label">
-							<span class="black">简餐</span>
-						</p>
-						<div class="youhui">
-							<div>
-								<span class="new">首</span>
-								<span>新用户下单立减14元</span>
-							</div>
-							<div>
-								<span class="subtract">减</span>
-								<span>满26减13，满46减20，满66减38</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="shop.html">
-					<div class="left-img li04"></div>
-					<div class="right-text">
-						<h3>贝克汉堡（铜锣湾店）</h3>
-						<p class="iconxx">
-							<span>
-								<i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-							</span>
-						    <span>5</span>
-						    <span class="yj">月售2528单</span>
-						    <span class="v">蜂鸟专送</span>
-						</p>
-						<p class="delivery">
-							<div class="delivery-left">
-								<span>起送&yen;30</span>
-							    <span>派送费&yen;6</span>
-							</div>
-							<div class="delivery-right">
-								<span>2.64km</span>
-							    <span>30分钟</span>
-							</div>
-						</p>
-						<p class="label">
-							<span class="black">汉堡</span>
-							<span class="red">
-								<i class="iconfont icon-koubei"></i>
-								<span>口碑人气好店</span>
-							</span>
-						</p>
-						<div class="youhui">
-							<div>
-								<span class="new">首</span>
-								<span>新用户下单立减14元</span>
-							</div>
-							<div>
-								<span class="subtract">减</span>
-								<span>满20减16，满30减26</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="shop.html">
-					<div class="left-img li05"></div>
-					<div class="right-text">
-						<h3>三红锅贴</h3>
-						<p class="iconxx">
-							<span>
-								<i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-						        <i class="iconfont icon-pingjiaxingxing"></i>
-							</span>
-						    <span>5</span>
-						    <span class="yj">月售262单</span>
-						    <span class="v">蜂鸟专送</span>
-						</p>
-						<p class="delivery">
-							<div class="delivery-left">
-								<span>起送&yen;15</span>
-							    <span>派送费&yen;5</span>
-							</div>
-							<div class="delivery-right">
-								<span>2.96km</span>
-							    <span>31分钟</span>
-							</div>
-						</p>
-						<p class="label">
-							<span class="black">生煎锅贴</span>
-						</p>
-						<div class="youhui">
-							<div>
-								<span class="new">首</span>
-								<span>新用户下单立减14元</span>
-							</div>
-						</div>
-					</div>
-				</a>
-			</li>
-		</ul>
+	<div class="recommend-shop" id="wrapper">
+        <div>
+            <ul class="recommend-shop-ul">
+
+            </ul>
+            <div class="scrolldown">
+                <i class="iconfont icon-jiazai"></i>
+                <span>加载中...</span>
+            </div>
+        </div>
 	</div>
 	<!--tab栏-->
 	<ul class="tab">
@@ -375,13 +144,13 @@ $_smarty_tpl->tpl_vars['j']->first = $_smarty_tpl->tpl_vars['j']->iteration === 
 			</a>
 		</li>
 		<li>
-			<a href="find.html">
+			<a>
 				<i class="iconfont icon-find"></i>
 			    <p>发现</p>
 			</a>
 		</li>
 		<li>
-			<a href="dindan.html">
+			<a href="/speedbuy/index.php/order">
 				<i class="iconfont icon-single"></i>
 			    <p>订单</p>
 			</a>
@@ -405,6 +174,10 @@ jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"><?php echo '</script
 <?php echo '<script'; ?>
  src="<?php echo JS_PATH;?>
 swiper-4.4.1.min.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="<?php echo JS_PATH;?>
+iscroll-probe.js" type="text/javascript" charset="utf-8"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
  src="<?php echo JS_PATH;?>

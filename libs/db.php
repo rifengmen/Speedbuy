@@ -112,7 +112,7 @@ class DB{
     }
     // 指定分页页码和显示条数
     function limit($offset,$limit) {
-        $this -> ordersql = " limit $offset,$limit ";
+        $this -> limitsql = " limit $offset,$limit ";
         return $this;
     }
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}goods.css"/>
+	<link rel="stylesheet" type="text/css" href="{CSS_PATH}iconfont.css"/>
+</head>
+<body>
+	<!--头部-->
+	<header>
+		<a href="/speedbuy/index.php/shop?sid={$res[0].sid}"class="position">
+			<i class="iconfont icon-xiangzuo"></i>
+			<span>返回</span>
+		</a>
+		<span>{$res[0].shopname}</span>
+		<a href="javascript:void (false)" class="icon">
+			<i class="iconfont icon-shoucang"></i>
+			<i class="iconfont icon-fenxiang"></i>
+		</a>
+	</header>
+	<!--food图片-->
+	<div class="food-img">
+		<img src="{$res[0].thumb}" alt="">
+	</div>
+	<!--商品介绍-->
+	<div class="shop-explain">
+		<div class="name">
+			<h1>{$res[0].title}</h1>
+			<p>
+				<span>月售{$res[0].count}单</span>
+				<span>好评{$res[0].score/5*100}%</span>
+			</p>
+			<div>
+				<div>&yen;{$res[0].discount}</div>
+				<del>&yen;{$res[0].price}</del>
+			</div>
+		</div>
+		<div class="explain">
+			<h2>商品描述</h2>
+			<p>{$res[0].des}</p>
+		</div>
+		<div class="comment">
+			<h2>顾客评价（823条）</h2>
+		</div>
+		<div class="none">
+			<h2>暂无评价</h2>
+		</div>
+	</div>
+</body>
+<script src="{JS_PATH}rem.js" type="text/javascript" charset="utf-8"></script>
+</html>

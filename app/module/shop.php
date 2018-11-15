@@ -68,7 +68,7 @@ class shop extends main
             $sql .= $str;
             $rows = $db -> insert($sql);
             if ($rows >= 1) {
-                echo json_encode(["code" => 0, "msg" => "下单成功"]);
+                echo json_encode(["code" => 0, "msg" => "下单成功","orderid" => $oid]);
             }
             else {
                 echo json_encode(["code" => 2, "msg" => "订单详情失败"]);
@@ -79,5 +79,44 @@ class shop extends main
         }
 
 
+    }
+    // 打开支付页面
+    function confirm()
+    {
+        $this -> smarty -> display("confirm.html");
+    }
+    function orderdetail()
+    {
+        $oid = $_GET["oid"];
+        $db = new DB("orderextra");
+        $goods = $db -> where("oid=$oid") -> select("*");
+        $sid = $goods[0]["sid"];
+        $db = new DB("orders");
+        $order = $db -> where("oid=$oid") -> select("*");
+        $db = new DB("shop");
+        $shopname = $db -> where("sid=$sid") -> select("shopname");
+        $res = [];
+        $res["shopname"] = $shopname[0]["shopname"];
+        $res["goods"] = $goods;
+        $res["order"] = $order[0];
+        echo json_encode($res);
+    }
+    // 查看商家信息
+    function shopmsg()
+    {
+        $sid = $_GET["sid"];
+        $db = new DB("shop");
+        $res = $db -> where("sid=$sid") -> select("*");
+        echo json_encode($res);
+    }
+    // 商品详情
+    function goods()
+    {
+        $id = $_GET["id"];
+        $db = new DB("goods,shop");
+        $str = "goods.sid=shop.sid and id=$id";
+        $res = $db -> where($str) -> select("goods.*,shop.shopname");
+        $this -> smarty -> assign("res",$res);
+        $this -> smarty -> display("goods.html");
     }
 }

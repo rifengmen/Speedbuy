@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}order.css"/>
+    <link rel="stylesheet" type="text/css" href="{CSS_PATH}iconfont.css"/>
+</head>
+<body>
+	<!--头部-->
+	<header>
+		<span>订单</span>
+	</header>
+	<!--历史订单列表窗口-->
+	<div class="history" id="wrapper">
+		<!--历史订单列表-->
+        <div>
+            <div class="scrollup">
+                <span>不要拖了，上面没有的！</span>
+            </div>
+            <ul class="history-list">
+
+            </ul>
+            <div class="scrolldown">
+                <i class="iconfont icon-jiazai"></i>
+                <span>加载中...</span>
+            </div>
+        </div>
+	</div>
+	
+	<!--tab栏-->
+	<ul class="tab">
+		<li>
+			<a href="/speedbuy/index.php/index">
+				<i class="iconfont icon-shouye"></i>
+			    <p>首页</p>
+			</a>
+		</li>
+		<li>
+			<a>
+				<i class="iconfont icon-find"></i>
+			    <p>发现</p>
+			</a>
+		</li>
+		<li class="hot">
+			<a href="#">
+				<i class="iconfont icon-single"></i>
+			    <p>订单</p>
+			</a>
+		</li>
+		<li>
+			<a href="/speedbuy/index.php/my/querymy">
+				<i class="iconfont icon-icon7"></i>
+			    <p>我的</p>
+			</a>
+		</li>
+	</ul>
+	
+</body>
+<script src="{JS_PATH}rem.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}iscroll-probe.js" type="text/javascript" charset="utf-8"></script>
+<script src="{JS_PATH}order.js" type="text/javascript" charset="utf-8"></script>
+</html>

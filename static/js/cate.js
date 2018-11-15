@@ -48,7 +48,7 @@ $(function () {
         if (flag && flag1) {
             getCate();
         }
-    })
+    });
     // 分类列表点击时
     list.on("click",function () {
         list.removeClass("hot").filter(this).addClass("hot")
@@ -95,7 +95,7 @@ $(function () {
             }
         })
     }
-    let local = "/speedbuy/index.php/shop?sid="
+    let local = "/speedbuy/index.php/shop?sid=";
     // ajax请求完成时执行的函数
     function reder(data) {
         flag1 = true;

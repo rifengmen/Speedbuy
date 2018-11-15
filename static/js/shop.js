@@ -98,7 +98,7 @@ $(function () {
     function randerlist(arr) {
         let str = "";
         for (let j=0;j<arr.length;j++) {
-            str += `<li id="${arr[j].id}" data='${JSON.stringify(arr[j])}'>
+            str += `<li class="goods" id="${arr[j].id}" data='${JSON.stringify(arr[j])}'>
 								<a href="javascript:void (false)">
 									<div class="left-img">
 										<img src="${arr[j].thumb}" alt="">
@@ -232,7 +232,9 @@ $(function () {
                 if (res.code == 1) {
                     location.href = "/speedbuy/index.php/my?urls=/shop?sid=" + nums;
                 }
-
+                else if (res.code == 0) {
+                    location.href = "/speedbuy/index.php/shop/confirm?oid=" + res.orderid;
+                }
             }
         })
     })
@@ -333,4 +335,60 @@ $(function () {
         };
         localStorage.cars = JSON.stringify(cars);
     }
+    // 查看商家信息
+    $(".recommend-fl > li:first").on("click",function () {
+        $(this).addClass("hot").siblings().removeClass("hot");
+        $(".shop-msg").css("display","none");
+    })
+    $(".recommend-fl > li:last").on("click",function () {
+        $(this).addClass("hot").siblings().removeClass("hot");
+        let sid = location.search.split("=")[1];
+        $.ajax({
+            url: "/speedbuy/index.php/shop/shopmsg",
+            data: {sid},
+            dataType: "json",
+            success: function (res) {
+                console.log(res);
+                let  str = `<div class="view">
+		                            	<h3>商家实景</h3>
+		                            	<ul>
+		                            		${setviews(res[0].views)}
+		                            	</ul>
+		                         </div>
+		                         <div class="message">
+		                            	<h3>商家信息</h3>
+		                            	<p>${res[0].slogan}</p>
+		                         </div>
+		                         <ul>
+		                            	<li>
+		                            		<span>品类</span>
+		                            		<span>${res[0].stype}</span>
+		                            	</li>
+		                            	<li>
+		                            		<span>商家电话</span>
+		                            		<span>${res[0].sphone}</span>
+		                            	</li>
+		                         </ul>`;
+                $(this).addClass("hot").siblings().removeClass("hot");
+                $(".shop-msg").css("display","block").html(str);
+            }
+        })
+    });
+    // 设置商家实景照片的方法
+    function setviews(str) {
+        let html = "";
+        let arr = str.split(",");
+        arr.forEach(ele => {
+            html += `<li>
+		                 	<img src="${ele}" alt="">
+		                 </li>`;
+        })
+        return html;
+    }
+    // 点击查看商品详情
+    typebox.on("click",".goods img",function () {
+        let id = $(this).closest("li").attr("id");
+        location.href = "/speedbuy/index.php/shop/goods?id=" + id;
+    })
+
 })

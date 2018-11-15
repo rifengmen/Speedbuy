@@ -1,0 +1,42 @@
+@import url("base.css");
+/*头部*/
+div.backgroung {
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+img {
+	width: 100%;
+}
+div.discount {
+    position: fixed;
+    top: 1.4rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    font-size: 0.28rem;
+    color: #fff;
+}
+div.text {
+    position: fixed;
+    bottom: 2.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.44rem;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+div.text > a {
+    width: 1.8rem;
+    height: 0.44rem;
+    line-height: 0.44rem;
+    background-image: linear-gradient(0deg,#34e3fd 0%, #36f6fd 100%), linear-gradient(#f0f0f0,#f0f0f0);
+    box-shadow: 0rem 0.03rem 0.07rem 0rem rgba(75, 226, 253, 0.35);
+    border-radius: 0.22rem;
+    font-size: 0.26rem;
+    color: #fff;
+    text-align: center;
+}

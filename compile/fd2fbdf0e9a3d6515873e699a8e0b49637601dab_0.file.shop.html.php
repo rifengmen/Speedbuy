@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-13 03:25:50
+/* Smarty version 3.1.33, created on 2018-11-14 15:36:41
   from 'D:\wamp64\www\speedbuy\app\view\shop.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bea443e3cf819_47824001',
+  'unifunc' => 'content_5bec4109bbac24_01598562',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'fd2fbdf0e9a3d6515873e699a8e0b49637601dab' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\shop.html',
-      1 => 1542079549,
+      1 => 1542209800,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bea443e3cf819_47824001 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bec4109bbac24_01598562 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -79,13 +79,13 @@ iconfont.css"/>
 	<!--商家分类选项-->
 	<ul class="recommend-fl">
 		<li class="hot">
-			<a href="#">点餐</a>
+			<a>点餐</a>
 		</li>
 		<!--<li>-->
 			<!--<a href="#">评价</a>-->
 		<!--</li>-->
 		<li>
-			<a href="#">商家</a>
+			<a>商家</a>
 		</li>
 	</ul>
 	<!--商品窗口-->
