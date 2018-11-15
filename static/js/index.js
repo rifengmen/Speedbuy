@@ -21,6 +21,8 @@ $(function () {
     let page = 0, limit = 5, key = "sid", pages = 1;
     // 排列方式列表
     let shoplist = $(".recommend-fl > li");
+    // 获取搜索框
+    let seach = $("header > .sousuo > .icon-sousuo");
     // 初始化开关
     let flag = false;
     let flag1 = true;

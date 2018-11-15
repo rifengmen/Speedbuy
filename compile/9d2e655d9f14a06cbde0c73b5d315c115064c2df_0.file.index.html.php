@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-11-15 06:39:33
+/* Smarty version 3.1.33, created on 2018-11-15 10:17:28
   from 'D:\wamp64\www\speedbuy\app\view\index.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5bed14a59e9588_24254064',
+  'unifunc' => 'content_5bed47b84d29c3_30320109',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '9d2e655d9f14a06cbde0c73b5d315c115064c2df' => 
     array (
       0 => 'D:\\wamp64\\www\\speedbuy\\app\\view\\index.html',
-      1 => 1542263967,
+      1 => 1542277047,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5bed14a59e9588_24254064 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5bed47b84d29c3_30320109 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -41,25 +41,25 @@ index.css"/>
 	<header>
 		<div class="position">
 			<i class="iconfont icon-location"></i>
-			<span>山西省大同市</span>
+			<span>山西省太原市</span>
 		</div>
-			<a href="#" class="sousuo">
+			<a href="javascript:void (false)" class="sousuo">
 				<i class="iconfont icon-sousuo"></i>
-				<span>请输入您要搜索的美食</span>
+				<input type="text" name="" placeholder="请输入您要搜索的店铺">
 			</a>
 	</header>
 	<!--banner图-->
 	<div class="banner swiper-container">
 		<ul class="banner-img swiper-wrapper">
             <?php
-$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['shop']->value, 'v');
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['goods']->value, 'v');
 if ($_from !== null) {
 foreach ($_from as $_smarty_tpl->tpl_vars['v']->value) {
 ?>
 			<li class="swiper-slide">
 				<a href="/speedbuy/index.php/shop?sid=<?php echo $_smarty_tpl->tpl_vars['v']->value['sid'];?>
 ">
-					<img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['sthumb'];?>
+					<img src="<?php echo $_smarty_tpl->tpl_vars['v']->value['thumb'];?>
 " alt="">
 				</a>
 			</li>

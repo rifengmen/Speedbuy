@@ -9,9 +9,9 @@ class index extends main {
         $db = new DB("category");
         $res = $db -> where("pid=0") -> select("*");
         $num = ceil(count($res)/8) - 1;
-        $db = new DB("shop");
-        $shop = $db -> limit("5","3") -> select("*");
-        $this -> smarty -> assign("shop",$shop);
+        $db = new DB("goods");
+        $goods = $db -> limit("22","3") -> select("*");
+        $this -> smarty -> assign("goods",$goods);
         $this -> smarty -> assign("num",$num);
         $this -> smarty -> assign("res",$res);
         $this -> smarty -> display('index.html');

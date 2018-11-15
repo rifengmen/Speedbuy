@@ -15,20 +15,20 @@
 	<header>
 		<div class="position">
 			<i class="iconfont icon-location"></i>
-			<span>山西省大同市</span>
+			<span>山西省太原市</span>
 		</div>
-			<a href="#" class="sousuo">
+			<a href="javascript:void (false)" class="sousuo">
 				<i class="iconfont icon-sousuo"></i>
-				<span>请输入您要搜索的美食</span>
+				<input type="text" name="" placeholder="请输入您要搜索的店铺">
 			</a>
 	</header>
 	<!--banner图-->
 	<div class="banner swiper-container">
 		<ul class="banner-img swiper-wrapper">
-            {foreach $shop as $v}
+            {foreach $goods as $v}
 			<li class="swiper-slide">
 				<a href="/speedbuy/index.php/shop?sid={$v.sid}">
-					<img src="{$v.sthumb}" alt="">
+					<img src="{$v.thumb}" alt="">
 				</a>
 			</li>
             {/foreach}

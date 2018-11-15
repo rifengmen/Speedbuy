@@ -14,7 +14,8 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
-header>.position,header>.position>i {
+header>.position,
+header>.position>i {
 	font-size: 0.3rem;
 }
 header>.sousuo {
@@ -31,7 +32,12 @@ header>.sousuo>i {
 	line-height: 0.56rem;
 	font-size: 0.3rem;
 }
-
+header>.sousuo>input {
+	display: inline-block;
+	border: 0;
+	outline-style: none;
+	font-size: 0.22rem;
+}
 /*banner图*/
 div.banner {
 	width: 100%;
